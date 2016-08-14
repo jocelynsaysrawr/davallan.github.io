@@ -1,10 +1,12 @@
 body {
 	margin: 0px;
 	background: #f4f4f4;
+    font-family: 'Oswald', sans-serif;
 }
 
 .greeting {
     display: block;
     width: 100%;
     text-align: center;
+    color: gray;
 }
