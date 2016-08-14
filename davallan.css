@@ -1,7 +1,7 @@
 body {
 	margin: 0px;
 	background: #f4f4f4;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .greeting {
@@ -9,7 +9,7 @@ body {
     width: 100%;
     text-align: center;
     color: gray;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Bangers', cursive;
     padding: 24px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
