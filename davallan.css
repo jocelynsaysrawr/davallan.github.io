@@ -2,3 +2,9 @@ body {
 	margin: 0px;
 	background: #f4f4f4;
 }
+
+.greeting {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
