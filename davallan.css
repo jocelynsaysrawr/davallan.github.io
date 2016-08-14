@@ -16,4 +16,5 @@ body {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     border-bottom: solid 1px lightgray;
+    font-weight: normal;
 }
