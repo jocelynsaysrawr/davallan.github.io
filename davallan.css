@@ -9,4 +9,11 @@ body {
     width: 100%;
     text-align: center;
     color: gray;
+    font-family: 'Oswald', sans-serif;
+    padding: 24px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    border-bottom: solid 1px lightgray;
 }
