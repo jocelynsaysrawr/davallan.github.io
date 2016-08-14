@@ -19,7 +19,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    border-bottom: solid 1px lightgray;
+/*    border-bottom: solid 1px lightgray;*/
     font-weight: normal;
 }
 
@@ -56,4 +56,11 @@ body {
     min-height: 450px;
     background-size: cover;
     background-position: center center;
+}
+
+.cont-box {
+    display: block;
+    width: 100%;
+    min-height: 450px;
+    background-color: #f4f4f4;
 }
