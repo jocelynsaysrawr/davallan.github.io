@@ -23,8 +23,12 @@ body {
     font-weight: normal;
 }
 
-.greeting h1 {
+.title {
     margin-bottom: 0px;
+}
+
+.title-desc {
+    margin-top: 0px;
 }
 
 .button {
