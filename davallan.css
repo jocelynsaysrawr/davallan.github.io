@@ -1,6 +1,6 @@
 body {
 	margin: 0px;
-	background: #f4f4f4;
+	background-color: #f4f4f4;
     font-family: 'Roboto Slab', serif;
     background-size: cover;
     background-position: top center;
@@ -10,6 +10,7 @@ body {
 
 .greeting {
     display: block;
+    background-color: #f4f4f4;
     width: 100%;
     text-align: center;
     color: gray;
