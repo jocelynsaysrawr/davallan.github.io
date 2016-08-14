@@ -23,6 +23,10 @@ body {
     font-weight: normal;
 }
 
+.greeting h1 {
+    margin-bottom: 0px;
+}
+
 .button {
     padding: 12px 24px;
     display: inline-block;
