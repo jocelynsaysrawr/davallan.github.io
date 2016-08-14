@@ -65,6 +65,8 @@ body {
     min-height: 450px;
     background-size: cover;
     background-position: center center;
+    background-repeat: repeat;
+    background: url(images/diagonal-noise.png);
 }
 
 .cont-box {
