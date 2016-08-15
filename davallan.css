@@ -100,3 +100,12 @@ body {
         border-color: transparent;
     }
 }
+
+@-webkit-keyframes blink {
+    from{
+        border-color: white;
+    }
+    to{
+        border-color: transparent;
+    }
+}
