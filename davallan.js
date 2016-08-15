@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     function writeWelcome(){
         $.each(welcome, function(i){
-            setTimeout(function(){$('.main-pane').append(welcome[i])},5000);
+            setTimeout({function(){$('.main-pane').append(welcome[i])}},5000);
         });
     }
     
