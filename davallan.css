@@ -88,7 +88,7 @@ body {
     font-weight: bold;
     animation-name: blink;
     animation-iteration-count: infinite;
-    animation-duration: .5s;
+    animation-duration: 1s;
     animation-timing-function: ease;
 }
 

@@ -14,6 +14,6 @@ $(document).ready(function(){
         });
     }
     
-    setTimeout(writeWelcome, 500);
+    setTimeout(writeWelcome, 2000);
     
 });
