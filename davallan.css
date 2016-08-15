@@ -75,3 +75,11 @@ body {
     min-height: 450px;
     background-color: #f4f4f4;
 }
+
+.write-box {
+    display: block;
+    margin: auto;
+    background: transparent;
+    border-right: solid 3px white;
+    padding: 3px;
+}
