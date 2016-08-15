@@ -86,4 +86,17 @@ body {
     font-size: 4em;
     color: white;
     font-weight: bold;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+}
+
+@keyframes blink {
+    from{
+        border-color: white;
+    }
+    to{
+        border-color: transparent;
+    }
 }
