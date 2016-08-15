@@ -7,10 +7,11 @@ $(document).ready(function(){
     
     function writeWelcome(){
         $.each(welcome, function(i){
-            setTimeout({function(){$('.main-pane').append(welcome[i])}},5000);
+            function writeLetter = $('.main-pane').append(welcome[i]);
+            setTimeout(writeLetter,50);
         });
     }
     
-    setTimeout(writeWelcome, 5000);
+    setTimeout(writeWelcome, 500);
     
 });
