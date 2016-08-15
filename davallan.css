@@ -90,6 +90,7 @@ body {
     animation-iteration-count: infinite;
     animation-duration: 1s;
     animation-timing-function: ease;
+    margin-top: 40px;
 }
 
 @keyframes blink {
