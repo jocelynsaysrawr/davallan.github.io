@@ -6,7 +6,7 @@ $(document).ready(function(){
     console.log(welcome[1]);
     
     $.each(welcome, function(i){
-        $('.main-pane').append(welcome[i]);
+        $('.main-pane').append(welcome[i]).delay(5000);
     });
     
 });
