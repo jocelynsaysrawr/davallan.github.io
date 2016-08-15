@@ -3,8 +3,9 @@
 $(document).load(function(){
    
     var welcome = ['H','e','l','l','o',' ','T','h','e','r','e','!'];
+    console.log(welcome[1]);
     
-    $(welcome).each(function(i){
+    $.each(welcome, function(i){
         $('.main-pane').append(welcome[i]);
     });
     
