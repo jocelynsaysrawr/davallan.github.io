@@ -97,22 +97,28 @@ body {
     0%{
         border-color: white;
     }
-    80%{
+    60%{
         border-color: white;
     }
-    100% {
+    80%{
         border-color: transparent;
+    }
+    100% {
+        border-color: white;
     }
 }
 
 @-webkit-keyframes blink {
-    0%{
+     0%{
+        border-color: white;
+    }
+    60%{
         border-color: white;
     }
     80%{
-        border-color: white;
+        border-color: transparent;
     }
     100% {
-        border-color: transparent;
+        border-color: white;
     }
 }
