@@ -67,6 +67,7 @@ body {
     background-position: center center;
     background-repeat: repeat;
     background: url(images/diagonal-noise.png);
+    text-align: center;
 }
 
 .cont-box {
@@ -77,9 +78,12 @@ body {
 }
 
 .write-box {
-    display: block;
+    display: inline-block;
     margin: auto;
     background: transparent;
     border-right: solid 3px white;
     padding: 3px;
+    font-size: 45px;
+    color: white;
+    font-weight: bold;
 }
