@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
     
-    $('.greeting').scrollTop(-1);
+    $('.greeting').scrollTop(5);
    
     var welcome = ['H','e','l','l','o',' ','T','h','e','r','e','!'];
     var time = 100;
