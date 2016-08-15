@@ -75,6 +75,7 @@ body {
     width: 100%;
     min-height: 450px;
     background-color: #f4f4f4;
+    overflow: hidden;
 }
 
 .write-box {
