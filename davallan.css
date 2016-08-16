@@ -13,7 +13,6 @@ body {
 .bg-overlay {
     display: block;
     overflow: hidden;
-    min-height: 850px;
     background: rgba(61, 57, 177, 0.75);
 }
 
