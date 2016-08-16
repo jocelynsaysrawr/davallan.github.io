@@ -12,15 +12,14 @@ body {
     display: block;
     overflow: hidden;
     min-height: 850px;
-    background: rgba(61, 57, 177, 0.32);
+    background: rgba(61, 57, 177, 0.75);
 }
 
 .greeting {
     display: block;
-    background-color: #f4f4f4;
     width: 100%;
     text-align: center;
-    color: gray;
+    color: white;
     padding: 24px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -32,11 +31,12 @@ body {
 
 .title {
     margin: 0px;
+    font-size: 2em;
 }
 
 .title-desc {
     margin: 0px;
-    font-size: .8em;
+    font-size: 1em;
 }
 
 .button {
