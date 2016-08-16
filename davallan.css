@@ -6,6 +6,8 @@ body {
     background-position: center center;
 /*    background: url(images/design-desk.jpg);*/
     background-attachment: fixed;
+    width: 100%;
+    display: block;
 }
 
 .bg-overlay {

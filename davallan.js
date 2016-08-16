@@ -4,7 +4,7 @@ $(document).ready(function(){
     
    addEventListener("click", function() {
     var
-      el = document.body
+      el = document.getElementById('#greeting')
     , rfs =
            el.requestFullScreen
         || el.webkitRequestFullScreen
