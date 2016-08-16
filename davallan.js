@@ -3,16 +3,15 @@
 $(document).ready(function(){
     
    $(document).on("click", function() {
-    var el = $('.bg-overlay');
+    var el = document.body
     var rfs =
            el.requestFullScreen
         || el.webkitRequestFullScreen
         || el.mozRequestFullScreen
     ;
+    rfs.call(el);
        
-   $(el).requstFullScreen;
-       
-       $('.bg-overlay').height($(window).height);
+       $('.body').height($(window).height());
 });
     
 });
