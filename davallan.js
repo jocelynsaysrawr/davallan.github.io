@@ -2,16 +2,17 @@
 
 $(document).ready(function(){
     
-   $(document).on("click", function() {
-    var el = document.body
-    var rfs =
+   addEventListener("click", function() {
+    var
+      el = document.body
+    , rfs =
            el.requestFullScreen
         || el.webkitRequestFullScreen
         || el.mozRequestFullScreen
     ;
     rfs.call(el);
        
-       $('.body').height($(window).height());
+        $('body').height($(window).height());
 });
     
 });
