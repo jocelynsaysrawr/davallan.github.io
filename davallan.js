@@ -10,7 +10,7 @@ $(document).ready(function(){
         || el.mozRequestFullScreen
     ;
        
-    rfs.call(el);
+   $(el).requstFullScreen;
        
        $('.bg-overlay').height($(window).height);
 });
