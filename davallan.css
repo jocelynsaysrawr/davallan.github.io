@@ -69,7 +69,6 @@ body {
 .main-pane {
     display: block;
     width: 100%;
-    min-height: 450px;
     background-size: cover;
     background-position: center center;
     background-repeat: repeat;
@@ -80,7 +79,6 @@ body {
 .cont-box {
     display: block;
     width: 100%;
-    min-height: 450px;
     background-color: #f4f4f4;
     overflow: hidden;
 }
