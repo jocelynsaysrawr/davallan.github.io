@@ -8,6 +8,13 @@ body {
     background-attachment: fixed;
 }
 
+.bg-overlay {
+    display: block;
+    overflow: hidden;
+    min-height: 850px;
+    background: rgba(61, 57, 177, 0.32);
+}
+
 .greeting {
     display: block;
     background-color: #f4f4f4;
