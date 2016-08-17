@@ -2,19 +2,27 @@ html {
     background-color: royalblue;
 }
 
+.back-color {
+    background-color: royalblue;
+}
+
 body {
 	margin: 0px;
     font-family: 'Roboto Slab', serif;
     width: 100%;
     display: block;
-    background-color: royalblue;
+    
 }
 
 #bg-overlay {
     display: block;
     overflow: hidden;
     width: 100%;
-    background-color: royalblue;
+    transition: ease .25s;
+    -webkit-transition: ease .25s;
+    -moz-transition: ease .25s;
+    -ms-transition: ease .25s;
+    -o-transition: ease .25s;
 }
 
 .greeting {

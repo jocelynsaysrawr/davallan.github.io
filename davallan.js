@@ -15,6 +15,7 @@ $(document).ready(function(){
             $('#bg-overlay').height($(window).height());
             $('.bottom-nav').css('bottom', '0').fadeIn();
             $('body').fadeIn('slow');
+            $('.back-color').css('background-color','orangered');
         },1500);
         
     });
