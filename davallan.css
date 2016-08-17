@@ -33,14 +33,14 @@ body {
 }
 
 .bottom-nav {
-    display: block;
+    display: none;
     width: 100%;
-    background: #f4f4f4;
     min-height: 40px;
     position: absolute;
     bottom: 0;
     z-index: 1000;
-    display: none;
+    text-align: center;
+    
 }
 
 .enter-button {
@@ -100,6 +100,11 @@ body {
     font-size: 30px !important;
     padding: 6px !important;
     cursor: pointer;
+    background: white;
+   -webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
+    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
+    margin: 5px;
 }
 
 .navcon:active {
