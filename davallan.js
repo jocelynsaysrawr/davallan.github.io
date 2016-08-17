@@ -11,7 +11,7 @@ $(document).ready(function(){
         setTimeout(
         function(){
             $('#bg-overlay').height($(window).height());
-            $('.bottom-nav').css('bottom', '0');
+            $('.bottom-nav').css('bottom', '0').fadeIn();
         },1500);
         
     });
