@@ -4,7 +4,7 @@ $(document).ready(function(){
     
    addEventListener("click", function() {
     var
-      el = document.getElementById('.bg-overlay')
+      el = document.body
     , rfs =
            el.requestFullScreen
         || el.webkitRequestFullScreen
@@ -12,7 +12,7 @@ $(document).ready(function(){
     ;
     rfs.call(el);
        
-        $('.bg-overlay').height($(window).height());
+        $('body').height($(window).height());
 });
     
 });

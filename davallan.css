@@ -1,27 +1,19 @@
-body {
+body,
+body:fullscreen{
 	margin: 0px;
     font-family: 'Roboto Slab', serif;
-    background-size: cover;
-    background-position: center center;
-/*    background: url(images/design-desk.jpg);*/
-    background-attachment: fixed;
     width: 100%;
     display: block;
+    background: #523399;
+
 }
 
 .bg-overlay {
     display: block;
     overflow: hidden;
-    background: #523399;
     width: 100%;
 }
 
-.bg-overlay:fullscreen {
-    display: block;
-    overflow: hidden;
-    background: #523399;
-    width: 100%;
-}
 
 .greeting {
     display: block;
