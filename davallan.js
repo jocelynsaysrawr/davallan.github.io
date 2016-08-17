@@ -4,7 +4,8 @@ $(document).ready(function(){
     
     $('#bg-overlay').height($(window).height());
     
-    $(document).on('click', '.title', function(){
+    $(document).on('click', '.enter-button', function(){
+        $(this).fadeOut('slow');
        $('#bg-overlay').fullScreen(); 
         
         setTimeout(
