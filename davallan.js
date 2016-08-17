@@ -2,17 +2,11 @@
 
 $(document).ready(function(){
     
-   addEventListener("click", function() {
-    var
-      el = document.body
-    , rfs =
-           el.requestFullScreen
-        || el.webkitRequestFullScreen
-        || el.mozRequestFullScreen
-    ;
-    rfs.call(el);
-       
-        $('body, #bg-overlay').height($(window).height());
+    $('body, #bg-overlay').height($(window).height());
+    
+    $(document).on('click', function(){
+       $('#bg-overlay').fullscreen(); 
+    });
        
 });
     
