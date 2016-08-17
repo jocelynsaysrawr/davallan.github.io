@@ -9,7 +9,10 @@ $(document).ready(function(){
        $('#bg-overlay').fullScreen(); 
         
         setTimeout(
-        function(){$('#bg-overlay').height($(window).height());},1500);
+        function(){
+            $('#bg-overlay').height($(window).height());
+            $('.bottom-nav').css('bottom', '0');
+        },1500);
         
     });
            
