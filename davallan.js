@@ -4,7 +4,7 @@ $(document).ready(function(){
     
    addEventListener("click", function() {
     var
-      el = document.getElementById('#bg-overlay');
+      el = document.getElementById('#bg-overlay')
     , rfs =
            el.requestFullScreen
         || el.webkitRequestFullScreen
