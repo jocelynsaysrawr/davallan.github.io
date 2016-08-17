@@ -97,8 +97,8 @@ body {
 
 .navcon {
     color: gray;
-    font-size: 30px;
-    padding: 4px;
+    font-size: 30px !important;
+    padding: 6px !important;
 }
 
 .cont-box {
