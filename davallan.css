@@ -99,6 +99,11 @@ body {
     color: gray;
     font-size: 30px !important;
     padding: 6px !important;
+    cursor: pointer;
+}
+
+.navcon:active {
+    background: #f4f4f4;
 }
 
 .cont-box {
