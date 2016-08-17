@@ -1,18 +1,23 @@
-body,
-body:fullscreen {
+body {
 	margin: 0px;
     font-family: 'Roboto Slab', serif;
     width: 100%;
     display: block;
-    background: #523399;
 }
 
-.bg-overlay {
+#bg-overlay {
     display: block;
     overflow: hidden;
     width: 100%;
+    background: purple;
 }
 
+#bg-overlay {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    background: purple;
+}
 
 .greeting {
     display: block;
