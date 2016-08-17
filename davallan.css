@@ -10,11 +10,13 @@ body {
     display: block;
     overflow: hidden;
     width: 100%;
-    background-color: purple
+    background-color: royalblue;
 }
 
 .greeting {
     display: block;
+    position: fixed;
+    top: 0;
     width: 100%;
     text-align: center;
     color: white;
@@ -23,7 +25,6 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-/*    border-bottom: solid 1px lightgray;*/
     font-weight: normal;
 }
 

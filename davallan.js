@@ -12,7 +12,8 @@ $(document).ready(function(){
     ;
     rfs.call(el);
        
-        $('body').height($(window).height());
+        $('body, #bg-overlay').height($(window).height());
+       
 });
     
 });
