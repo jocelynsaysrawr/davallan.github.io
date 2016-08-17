@@ -95,6 +95,12 @@ body {
     text-align: center;
 }
 
+.nav-con {
+    color: gray;
+    font-size: 30px;
+    padding: 4px;
+}
+
 .cont-box {
     display: block;
     width: 100%;
