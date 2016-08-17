@@ -3,9 +3,8 @@
 $(document).ready(function(){
     
    addEventListener("click", function() {
-    var
-      el = document.getElementById('#bg-overlay')
-    , rfs =
+    var el = document.getElementById('#bg-overlay');
+    var rfs =
            el.requestFullScreen
         || el.webkitRequestFullScreen
         || el.mozRequestFullScreen
