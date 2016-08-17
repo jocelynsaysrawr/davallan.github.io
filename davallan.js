@@ -8,6 +8,7 @@ $(document).ready(function(){
         $(this).fadeOut('fast');
         $('body').fadeOut('fast');
         $('#bg-overlay').fullScreen(); 
+        $('.greeting').hide();
         
         setTimeout(
         function(){
