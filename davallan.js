@@ -7,7 +7,7 @@ $(document).ready(function(){
     $(document).on('click', '.enter-button', function(){
         $(this).fadeOut('fast');
         $('body').fadeOut('fast');
-        $('html').fullScreen(); 
+        $('#bg-overlay').fullScreen(); 
         $('.greeting').hide();
         
         setTimeout(
