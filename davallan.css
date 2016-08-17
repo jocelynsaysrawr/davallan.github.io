@@ -122,6 +122,10 @@ body {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     vertical-align: middle;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .nav-home {
