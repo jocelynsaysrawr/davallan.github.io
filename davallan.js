@@ -6,7 +6,10 @@ $(document).ready(function(){
     
     $(document).on('click', '.title', function(){
        $('#bg-overlay').fullScreen(); 
-        $('#bg-overlay').height($(window).height());
+        
+        setTimeout(
+        function(){$('#bg-overlay').height($(window).height());},500);
+        
     });
            
 });
