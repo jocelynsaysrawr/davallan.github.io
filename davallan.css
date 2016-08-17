@@ -37,6 +37,9 @@ body {
     width: 100%;
     background: #f4f4f4;
     min-height: 40px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
 }
 
 .title {
