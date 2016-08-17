@@ -32,6 +32,13 @@ body {
     font-weight: normal;
 }
 
+.bottom-nav {
+    display: block;
+    width: 100%;
+    background: #f4f4f4;
+    min-height: 40px;
+}
+
 .title {
     margin: 0px;
     font-size: 2em;
