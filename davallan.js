@@ -6,6 +6,7 @@ $(document).ready(function(){
     
     $(document).on('click', function(){
        $('#bg-overlay').fullScreen(); 
+        $('body, #bg-overlay').height($(window).height());
     });
            
 });
