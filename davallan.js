@@ -8,7 +8,7 @@ $(document).ready(function(){
        $('#bg-overlay').fullScreen(); 
         
         setTimeout(
-        function(){$('#bg-overlay').height($(window).height());},500);
+        function(){$('#bg-overlay').height($(window).height());},1500);
         
     });
            
