@@ -45,7 +45,6 @@ body {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     padding: 24px 12px;
-    
 }
 
 .enter-button {
@@ -102,8 +101,7 @@ body {
 
 .navcon {
     color: gray;
-    font-size: 30px !important;
-    padding: 6px !important;
+    padding: 6px;
     cursor: pointer;
     background: white;
    -webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
@@ -114,6 +112,11 @@ body {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
+    vertical-align: middle;
+}
+
+.nav-home {
+    font-size: 36px;
 }
 
 .navcon:active {
