@@ -3,20 +3,14 @@ body {
     font-family: 'Roboto Slab', serif;
     width: 100%;
     display: block;
+    background-color: royalblue;
 }
 
 #bg-overlay {
     display: block;
     overflow: hidden;
     width: 100%;
-    background-color: purple;
-}
-
-#bg-overlay:fullscreen {
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    background-color: purple;
+    background-color: purple
 }
 
 .greeting {
