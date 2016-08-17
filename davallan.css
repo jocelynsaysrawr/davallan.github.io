@@ -46,7 +46,7 @@ body {
     margin: auto;
     color: royalblue;
     background: white;
-    margin-top: 120px;
+    margin-top: 120px !important;
 }
 
 .title {
