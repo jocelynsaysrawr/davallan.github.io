@@ -20,7 +20,7 @@ $(document).ready(function(){
         
     });
     
-    $.get('https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=2f9557344467c41a762ab15727fd46a1&photo_id=28165318402&format=json&nojsoncallback=1&auth_token=72157672883510785-110320266b822668',
+    $.get('https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=2f9557344467c41a762ab15727fd46a1&photo_id=28165318402&format=json&auth_token=72157672883510785-110320266b822668',
         function(e){
             console.log(e);
             var source = '';
