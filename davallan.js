@@ -22,9 +22,9 @@ $(document).ready(function(){
     
     $.get('https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=2f9557344467c41a762ab15727fd46a1&photo_id=28165318402&format=json',
         function(e){
-            e = JSON.parse(e);
-            console.log($.type(e));
-            var sizes = e.sizes;
+            var json = $.parseJSON(e);
+            console.log($.type(json));
+            var sizes = json.sizes;
             sizes.each(function(i){
                 if (i.label == 'Original'){
                     source = i.source;
