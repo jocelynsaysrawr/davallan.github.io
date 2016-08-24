@@ -23,11 +23,10 @@ $(document).ready(function(){
     $.get('https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=2f9557344467c41a762ab15727fd46a1&photo_id=28165318402&format=json',
         function(e){
             console.log(e);
-            var source = '';
-            $('#document').find('size').each(function(i){
-               if (i.attr('label') === 'Original') {
-                   source = i.attr('source');
-               } 
+            e.sizes.each(function(i){
+                if (i.label == 'Original'){
+                    source = i.source;
+                }
             });
             console.log(source);
         });
