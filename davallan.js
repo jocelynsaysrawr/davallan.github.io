@@ -20,7 +20,7 @@ $(document).ready(function(){
         
     });
     
-    .ajax({
+    $.ajax({
         url: 'https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=2f9557344467c41a762ab15727fd46a1&photo_id=28165318402&format=rest&auth_token=72157672883510785-110320266b822668&api_sig=2d01f3e6f6ec0b8943dcf271431c8d09',
         type: 'GET',
         dataType: 'jsonp',
