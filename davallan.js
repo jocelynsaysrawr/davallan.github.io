@@ -19,6 +19,7 @@ $(document).ready(function(){
         $('.greeting').hide();
         
         function writeText(e){
+            $('.text-box').html('');
             var splitText = textRelay[e].split('');
             console.log('split text');
             console.log(splitText);
