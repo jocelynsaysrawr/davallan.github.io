@@ -16,21 +16,9 @@ $(document).ready(function(){
             $('.bottom-nav').css('bottom', '0').fadeIn();
             $('body').fadeIn('slow');
             $('.back-color').css('background-color','orangered');
+            $('.text-box').html('Hello. I\'m glad you are here! We\'ve got a lot of catching up to do.');
         },1500);
         
     });
-    
-    $.get('https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=2f9557344467c41a762ab15727fd46a1&photo_id=28165318402&format=json',
-        function(e){
-            console.log(e);
-            var json = $.parseJSON(e,true);
-            var sizes = json.sizes;
-            sizes.each(function(i){
-                if (i.label == 'Original'){
-                    source = i.source;
-                }
-            });
-            console.log(source);
-        });
            
 });

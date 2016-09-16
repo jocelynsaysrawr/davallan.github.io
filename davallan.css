@@ -144,6 +144,18 @@ body {
     overflow: hidden;
 }
 
+.text-box {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 24px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .write-box {
     display: inline-block;
     margin: auto;
