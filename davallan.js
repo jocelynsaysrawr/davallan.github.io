@@ -4,6 +4,8 @@ $(document).ready(function(){
     
     $('#bg-overlay').height($(window).height());
     $('.text-box').hide();
+    var posTop = $(window).height() / 2 - $('.text-box').outerHeight() / 2;
+    $('.text-box').css('top', posTop);
     
     $(document).on('click', '.enter-button', function(){
         $(this).fadeOut('fast');
