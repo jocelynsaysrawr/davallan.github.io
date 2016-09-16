@@ -48,7 +48,7 @@ body {
     position: absolute;
     bottom: 0;
     z-index: 1000;
-    text-align: center;
+    text-align: right;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

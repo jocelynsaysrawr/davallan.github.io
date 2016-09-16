@@ -20,6 +20,7 @@ $(document).ready(function(){
         
         function writeText(e){
             $('.text-box').html('');
+            $('.bottom-nav').hide();
             var splitText = textRelay[e].split('');
             console.log('split text');
             console.log(splitText);
@@ -29,6 +30,8 @@ $(document).ready(function(){
                     $('.text-box').append(splitText[splitInt]);
                     splitInt++;
                 }, 40);
+            } else {
+                $('.bottom-nav').fadeIn();
             }
         }
         
@@ -39,12 +42,7 @@ $(document).ready(function(){
             $('body').fadeIn('slow');
             $('.back-color').css('background-color','orangered');
         }, 1500);
-        
-        setTimeout(
-            function(){
-                $('.bottom-nav').fadeIn();
-            }, 60000
-        );
+    
         
         setTimeout(function(){
             $('.text-box').fadeIn(); 
