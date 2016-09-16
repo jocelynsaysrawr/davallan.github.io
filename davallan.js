@@ -25,7 +25,7 @@ $(document).ready(function(){
             console.log('split text');
             console.log(splitText);
             var splitInt = 0;
-            if (splitInt <= splitText.length){
+            if (splitInt <= splitText.length-1){
                 setInterval(function(){
                     $('.text-box').append(splitText[splitInt]);
                     splitInt++;
