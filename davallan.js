@@ -2,7 +2,10 @@
 
 $(document).ready(function(){
     
-    var textRelay = ["Hello. I'm glad you are here! We've got a lot of catching up to do."]
+    var textRelay = [
+        "Hello. I'm glad you are here! We've got a lot of catching up to do.",
+        "My name is David Shafer, and I am a front end web developer. I love what I do!"
+    ];
     
     $('#bg-overlay').height($(window).height());
     $('.text-box').hide();
@@ -24,7 +27,7 @@ $(document).ready(function(){
                 setInterval(function(){
                     $('.text-box').append(splitText[splitInt]);
                     splitInt++;
-                }, 100);
+                }, 60);
             }
         }
         
@@ -47,7 +50,11 @@ $(document).ready(function(){
             writeText(0);
         }, 2500);
         
-        
+        setTimeout(function(){
+             $('.back-color').css('background-color', 'royalblue');
+            $('.text-box').fadeIn(); 
+            writeText(1);
+        }, 4500);
         
     });
            
