@@ -55,7 +55,7 @@ $(document).ready(function(){
              $('.back-color').css('background-color', 'royalblue');
             $('.text-box').fadeIn(); 
             writeText(1);
-        }, 4500);
+        }, 45000);
         
     });
            
