@@ -28,7 +28,7 @@ $(document).ready(function(){
                 setInterval(function(){
                     $('.text-box').append(splitText[splitInt]);
                     splitInt++;
-                }, 60);
+                }, 40);
             }
         }
         
@@ -55,7 +55,7 @@ $(document).ready(function(){
              $('.back-color').css('background-color', 'royalblue');
             $('.text-box').fadeIn(); 
             writeText(1);
-        }, 45000);
+        }, 15000);
         
     });
            
