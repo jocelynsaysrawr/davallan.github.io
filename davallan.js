@@ -17,6 +17,8 @@ $(document).ready(function(){
         
         function writeText(e){
             var splitText = textRelay[e].split('');
+            console.log('split text');
+            console.log(splitText);
             $.each(splitText, function(i){
                 setTimeout(
                 function(){
