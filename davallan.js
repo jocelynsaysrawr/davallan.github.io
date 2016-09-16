@@ -19,11 +19,11 @@ $(document).ready(function(){
             var splitText = textRelay[e].split('');
             console.log('split text');
             console.log(splitText);
-            $.each(splitText, function(i){
+            splitText.each( function(i){
                 setTimeout(
                 function(){
                     $('.text-box').append(splitText[i]);
-                },250);
+                }, 250);
             });
         }
         
