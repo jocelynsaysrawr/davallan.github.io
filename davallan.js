@@ -4,7 +4,7 @@ $(document).ready(function(){
     
     $('#bg-overlay').height($(window).height());
     $('.text-box').hide();
-    var posTop = $(window).height() / 2 - $('.text-box').outerHeight() / 2;
+    var posTop = $(window).height() / 2 - $('.text-box').outerHeight();
     $('.text-box').css('top', posTop);
     
     $(document).on('click', '.enter-button', function(){
