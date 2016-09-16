@@ -28,7 +28,6 @@ $(document).ready(function(){
             }
         }
         
-        
         setTimeout(
         function(){
             $('#bg-overlay').height($(window).height());
