@@ -24,7 +24,7 @@ $(document).ready(function(){
                 setInterval(function(){
                     $('.text-box').append(splitText[splitInt]);
                     splitInt++;
-                }, 250);
+                }, 100);
             }
         }
         
