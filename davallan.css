@@ -1,5 +1,13 @@
 .back-color {
     background-color: royalblue;
+    transition: ease .5s;
+    -webkit-transition: ease .5s;
+    -moz-transition: ease .5s;
+    -ms-transition: ease .5s;
+    -o-transition: ease .5s;
+    background-repeat: repeat;
+/*    background-image: url(images/diagonal-noise.png);*/
+    
 }
 
 *{
@@ -53,7 +61,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    padding: 24px 12px;
+    padding: 24px;
 }
 
 .enter-button {
@@ -109,13 +117,9 @@ body {
 }
 
 .navcon {
-    color: gray;
+    color: white;
     padding: 6px;
     cursor: pointer;
-    background: white;
-   -webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
-    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
     margin: 5px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -126,6 +130,7 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    font-size: 35px !important;
 }
 
 .nav-home {
@@ -133,7 +138,7 @@ body {
 }
 
 .navcon:active {
-    background: #555555;
+    background: rgba(0,0,0,0.1);
     color: white;
 }
 
