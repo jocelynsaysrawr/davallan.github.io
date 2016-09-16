@@ -19,13 +19,15 @@ $(document).ready(function(){
             var splitText = textRelay[e].split('');
             console.log('split text');
             console.log(splitText);
-            splitText.each( function(i){
-                setTimeout(
-                function(){
-                    $('.text-box').append(splitText[i]);
+            var splitInt = 0;
+            if (splitInt <= splitText.length){
+                setInterval(function(){
+                    $('.text-box').append(splitText[splitInt]);
+                    splitInt++;
                 }, 250);
-            });
+            }
         }
+        
         
         setTimeout(
         function(){
