@@ -14,7 +14,6 @@ $(document).ready(function(){
         $('body').fadeOut('fast');
         $('#bg-overlay').fullScreen(); 
         $('.greeting').hide();
-        writeText(0);
         
         function writeText(e){
             var splitText = textRelay[e].split('');
@@ -42,6 +41,7 @@ $(document).ready(function(){
         
         setTimeout(function(){
             $('.text-box').fadeIn(); 
+            writeText(0);
         }, 2500);
         
         
