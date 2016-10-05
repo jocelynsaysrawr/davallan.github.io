@@ -5,10 +5,10 @@ $(document).ready(function(){
     $('.bottom-nav, .nav-back, .nav-forward').hide();
     var step = 0;
     var textRelay = [
-        "Hi. I'm David. I am a web developer specializing in visual experiences.",
-        "In a world where our senses are constantly bombarded, sometimes less is more...",
-        "I believe that information is easier to consume in bite-sized chunks...",
-        "You know... Like you are doing right now."
+        "Chances are you have already heard of the famous K.I.S.S. principle...",
+        "The idea was introduced by the United States Navy around the year 1960...",
+        "K.I.S.S. is an acronym for the phrase \"Keep It Simple, Stupid\"...",
+        "It is a design principle that suggests that the simplest solution to a problem is usually the best one."
     ];
     
     var bgColorLoop = ['orangered','white','orange','white','royalblue','white','royalblue'];
