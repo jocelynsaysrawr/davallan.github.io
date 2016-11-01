@@ -2,8 +2,8 @@
 
 $(document).ready(function(){
     
-    var minOrder = $('.window-section').first().data('order');
-    var maxOrder = $('.window-section').last().data('order');
+    var minOrder = $('.section').first().data('order');
+    var maxOrder = $('.section').last().data('order');
     
     console.log(minOrder + ' ' + maxOrder);
     
@@ -35,7 +35,7 @@ $(document).ready(function(){
     });
     
     $(document).on('scroll',function(){
-        $('.window-section').each(function(i){
+        $('.section').each(function(i){
             var topDist = $(this).offset().top - $(window).scrollTop();
             if (topDist >= -25 && topDist <= 100){
                 var thisVal = $(this).data('order');

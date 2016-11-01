@@ -10,10 +10,20 @@ body {
     -ms-user-select: none;
 }
 
-.window-section {
-    display: block;
+.section {
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    padding: 80px 24px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
 }
 
 .section1 {
@@ -25,11 +35,12 @@ body {
 }
 
 .section3 {
-    background-color: rebeccapurple;
+    background-color: #339972;
 }
 
 .nav-wrapper {
     position: fixed;
+    z-index: 1000;
     color: white;
     border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -51,3 +62,37 @@ body {
     color: gray;
     background-color: white;
 }
+
+.section h1,
+.section p {
+    display: block;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 24px;
+}
+
+.section p {
+    font-weight: 100;
+    font-size: .9em;
+    line-height: 1.5em;
+}
+
+.section-inner {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+}
+
+/*
+.header {
+    display: block;
+    background-color: #f4f4f4;
+    min-height: 40px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}*/
