@@ -1,6 +1,7 @@
 body {
     background: royalblue;
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .noselect {
@@ -24,6 +25,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
+    color: white;
 }
 
 .section1 {
@@ -35,7 +37,8 @@ body {
 }
 
 .section3 {
-    background-color: #339972;
+    background-color: #f4f4f4;
+    color: #339972;
 }
 
 .nav-wrapper {
@@ -51,7 +54,7 @@ body {
     bottom: 12px;
     right: 12px;
     cursor: pointer;
-    background: rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.2);
 }
 
 .nav {
@@ -66,8 +69,6 @@ body {
 .section h1,
 .section p {
     display: block;
-    color: white;
-    font-family: 'Roboto', sans-serif;
     margin-bottom: 24px;
 }
 
