@@ -36,12 +36,11 @@ body {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
-    border: solid 1px white;
     display: flex;
     bottom: 12px;
     right: 12px;
     cursor: pointer;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.2);
 }
 
 .nav {
