@@ -50,33 +50,49 @@ $(document).ready(function(){
     
     });
     
+    var timer = null;
+    
     $(document).on('scroll',function(){
+        clearTimeout($.data(this, 'scrollTimer'));
         var topDoc = $('body,html').offset().top - $(window).scrollTop();
-        $('.section').each(function(i){
-            var topDist = $(this).offset().top - $(window).scrollTop();
-            if (topDist >= -25 && topDist <= 100){
-                var thisVal = $(this).data('order');
-                if (thisVal+1 <= maxOrder){
-                    $('.nav-down').data('order', thisVal+1);
-                }
-                if (thisVal-1 >= minOrder){
-                    $('.nav-up').data('order', thisVal-1);
-                }
-                if (thisVal == minOrder){
-                    $('.nav-up').hide();
-                } else if (thisVal == maxOrder){
-                     $('.nav-down').hide();
-                } else {
-                    $('.nav-down, .nav-up').show();
-                }
-            }
-        });
         
-        if(topDoc < -80){
-            $('.me-wrapper').fadeOut('fast');
-        } else {
-            $('.me-wrapper').fadeIn('fast');
-        }
+        $.data(this, 'scrollTimer', setTimeout(function() {
+        
+            console.log("Haven't scrolled in 250ms!");
+        
+            $('.section').each(function(i){
+                var section = $(this);
+                var topDist = $(this).offset().top - $(window).scrollTop();
+                if (topDist >= -200 && topDist <= 300){
+                    var thisVal = $(this).data('order');
+                    
+                    $('body, html').animate({
+                        scrollTop: section.offset().top
+                    }, 800);
+
+                    if (thisVal+1 <= maxOrder){
+                        $('.nav-down').data('order', thisVal+1);
+                    }
+                    if (thisVal-1 >= minOrder){
+                        $('.nav-up').data('order', thisVal-1);
+                    }
+                    if (thisVal == minOrder){
+                        $('.nav-up').hide();
+                    } else if (thisVal == maxOrder){
+                         $('.nav-down').hide();
+                    } else {
+                        $('.nav-down, .nav-up').show();
+                    }
+                }
+            });
+
+            if(topDoc < -80){
+                $('.me-wrapper').fadeOut('fast');
+            } else {
+                $('.me-wrapper').fadeIn('fast');
+            }
+            
+        }, 250));
     });
     
     
