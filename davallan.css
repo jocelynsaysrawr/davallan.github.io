@@ -168,6 +168,13 @@ body {
     font-weight: 100;
 }
 
+.contact-icons .icofont {
+    font-size: 30px;
+    padding: 6px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
 /*
 .header {
     display: block;
