@@ -5,6 +5,22 @@ $(document).ready(function(){
     var minOrder = $('.section').first().data('order');
     var maxOrder = $('.section').last().data('order');
     
+    function navHideShow() {
+        if($('.nav-up').data('order') == '0'){
+            $('.nav-up').hide();
+        } else {
+            $('.nav-up').show();
+        }
+
+        if($('.nav-down').data('order') == maxOrder){
+            $('.nav-down').hide();
+        } else {
+            $('.nav-down').show();
+        }
+    }
+    
+    navHideShow();
+    
     console.log(minOrder + ' ' + maxOrder);
     
     $('.nav').click(function(event){
@@ -46,14 +62,20 @@ $(document).ready(function(){
                 if (thisVal-1 >= minOrder){
                     $('.nav-up').data('order', thisVal-1);
                 }
+                if (thisVal == minOrder){
+                    $('.nav-up').hide();
+                } else if (thisVal == maxOrder){
+                     $('.nav-down').hide();
+                } else {
+                    $('.nav-down, .nav-up').show();
+                }
             }
         });
         
-        
         if(topDoc < -80){
-            $('.me-info').fadeOut('fast');
+            $('.me-wrapper').fadeOut('fast');
         } else {
-            $('.me-info').fadeIn('fast');
+            $('.me-wrapper').fadeIn('fast');
         }
     });
     
