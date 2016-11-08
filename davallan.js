@@ -21,7 +21,7 @@ $(document).ready(function(){
 //                $(this).data('order', order+1);
 //            });
         } else if ($(this).hasClass('nav-up') && thisOrder >= minOrder) {
-            $('html, body').animate({
+            $('body, html').animate({
                 scrollTop: target.offset().top
             }, 800);
 //            $('.nav').each(function(i){
@@ -35,6 +35,7 @@ $(document).ready(function(){
     });
     
     $(document).on('scroll',function(){
+        var topDoc = $('body,html').offset().top - $(window).scrollTop();
         $('.section').each(function(i){
             var topDist = $(this).offset().top - $(window).scrollTop();
             if (topDist >= -25 && topDist <= 100){
@@ -47,6 +48,30 @@ $(document).ready(function(){
                 }
             }
         });
+        
+        
+        if(topDoc < -80){
+            $('.me-info').fadeOut('fast');
+        } else {
+            $('.me-info').fadeIn('fast');
+        }
     });
+    
+    
+    
+//    function launchFullScreen(element) {
+//      if(element.requestFullScreen) {
+//        element.requestFullScreen();
+//      } else if(element.mozRequestFullScreen) {
+//        element.mozRequestFullScreen();
+//      } else if(element.webkitRequestFullScreen) {
+//        element.webkitRequestFullScreen();
+//      }
+//    }
+//    
+//    $('.icofont').click(function(){
+//        console.log('full');
+//       launchFullScreen(document.body); 
+//    });
     
 });

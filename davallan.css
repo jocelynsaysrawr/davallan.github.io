@@ -2,6 +2,7 @@ body {
     background: royalblue;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
+    overflow-y: auto;
 }
 
 .noselect {
@@ -26,19 +27,27 @@ body {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     color: white;
+    background-repeat: repeat;
 }
 
 .section1 {
-    background-color: slateblue;
+    background-color: #7e57c2;
 }
 
 .section2 {
-    background-color: goldenrod;
+    background-color: #ef6c00;
 }
 
 .section3 {
-    background-color: #f4f4f4;
-    color: #339972;
+    background-color: #339972;
+}
+
+.section4 {
+    
+}
+
+.section5 {
+    background-color: #ff5722;
 }
 
 .nav-wrapper {
@@ -50,15 +59,21 @@ body {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
-    display: flex;
-    bottom: 12px;
-    right: 12px;
+    display: block;
+    bottom: 24px;
+    right: 24px;
     cursor: pointer;
-    background: rgba(0,0,0,0.2);
+/*    background: rgba(0,0,0,0.2);*/
+    overflow: hidden;
 }
 
 .nav {
-    padding: 6px;
+    font-size: 40px;
+    display: block;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
 }
 
 .nav:active {
@@ -70,6 +85,11 @@ body {
 .section p {
     display: block;
     margin-bottom: 24px;
+}
+
+.section h1 {
+    font-family: "Shrikhand",cursive;
+    font-weight: normal;
 }
 
 .section p {
@@ -85,6 +105,66 @@ body {
     overflow: hidden;
     justify-content: center;
     align-content: center;
+}
+
+.section-inner h1 .icofont {
+    margin-right: 12px;
+}
+
+.me-img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border: solid 2px white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.me-wrapper {
+    position: fixed;
+    top: 24px;
+    left: 24px; 
+    display: inline-block;
+/*    background: rgba(0,0,0,0.2);*/
+    padding: 12px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    transition: ease .25s;
+    -webkit-transition: ease .25s;
+    -moz-transition: ease .25s;
+    -ms-transition: ease .25s;
+    -o-transition: ease .25s;
+}
+
+.me-info {
+    display: inline-block;
+    max-width: 50vw;
+    vertical-align: middle;
+    margin-left: 12px;
+    margin-right: 12px;
+    line-height: 1.25em;
+}
+
+.me-text {
+    display: block;
+    color: white;
+    font-size: 24px;
+    font-family: "Shrikhand",cursive;
+}
+
+.me-desc {
+    font-size: 12px;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
 }
 
 /*
