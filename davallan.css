@@ -35,7 +35,7 @@ body {
 }
 
 .section2 {
-    background-color: #ef6c00;
+    background-color: #ffc107;
 }
 
 .section3 {
@@ -48,6 +48,11 @@ body {
 
 .section5 {
     background-color: #ff5722;
+}
+
+.section6 {
+    background-color: #1f1f1f;
+    color: #f44336;
 }
 
 .nav-wrapper {
@@ -173,6 +178,12 @@ body {
     padding: 6px;
     vertical-align: middle;
     cursor: pointer;
+}
+
+@media screen and (min-width: 468px){
+    .contact-icons .icofont:hover {
+        color: #ffc107;
+    }
 }
 
 /*
