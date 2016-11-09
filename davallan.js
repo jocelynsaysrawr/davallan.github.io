@@ -63,11 +63,11 @@ $(document).ready(function(){
                     $('.nav-up').data('order', thisVal-1);
                 }
                 if (thisVal == minOrder){
-                    $('.nav-up').hide();
+                    $('.nav-up').fadeOut();
                 } else if (thisVal == maxOrder){
-                     $('.nav-down').hide();
+                     $('.nav-down').fadeOut();
                 } else {
-                    $('.nav-down, .nav-up').show();
+                    $('.nav-down, .nav-up').fadeIn();
                 }
             }
         });
