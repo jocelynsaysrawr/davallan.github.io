@@ -25,16 +25,14 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    padding: 80px 24px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     color: white;
-    background-repeat: repeat;
     background-image: url(images/skyline.svg);
     background-size: 100%;
-    background-attachment: fixed;
+    background-attachment: local;
     background-position: bottom;
     background-repeat: no-repeat;
 }
@@ -118,7 +116,7 @@ body {
     display: block;
     max-width: 600px;
     margin: auto;
-    margin-top: 5vh;
+    margin-top: 10vh;
     align-content: center;
 }
 
@@ -142,12 +140,8 @@ body {
 
 
 .me-wrapper {
-    position: fixed;
-    top: 24px;
-    left: 24px; 
-    display: inline-block;
+    display: block;
 /*    background: rgba(0,0,0,0.2);*/
-    padding: 12px;
     border-radius: 100px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
@@ -157,6 +151,8 @@ body {
     -moz-transition: ease .25s;
     -ms-transition: ease .25s;
     -o-transition: ease .25s;
+    margin-bottom: 24px;
+    margin-top: 24px;
 }
 
 .me-info {
