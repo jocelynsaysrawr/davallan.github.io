@@ -118,7 +118,7 @@ body {
     display: block;
     max-width: 600px;
     margin: auto;
-    justify-content: center;
+    margin-top: 5vh;
     align-content: center;
 }
 
