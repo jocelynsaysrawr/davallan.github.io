@@ -185,6 +185,11 @@ body {
     cursor: pointer;
 }
 
+.contact-icons a {
+    text-decoration: none;
+    color: #f44336;
+}
+
 @media screen and (min-width: 468px){
     .contact-icons .icofont:hover {
         color: #ffc107;
