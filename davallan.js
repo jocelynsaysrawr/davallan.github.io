@@ -81,6 +81,7 @@ $(document).ready(function(){
     
     
     
+    
 //    function launchFullScreen(element) {
 //      if(element.requestFullScreen) {
 //        element.requestFullScreen();
