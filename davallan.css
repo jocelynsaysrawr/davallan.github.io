@@ -84,10 +84,10 @@ body {
 .nav {
     font-size: 36px;
     display: block;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
+}
+
+.nav:first-child {
+    border-bottom: solid 1px lightgray;
 }
 
 .nav:active {
@@ -118,7 +118,6 @@ body {
     display: block;
     max-width: 600px;
     margin: auto;
-    overflow: hidden;
     justify-content: center;
     align-content: center;
 }
@@ -206,6 +205,27 @@ body {
     .section h1 {
         font-size: 24px;
     }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #fff;
+    color: gray;
+    font-weight: 100;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+     -webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
+    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.button-check {
+    margin-right: 6px;
 }
 
 /*
