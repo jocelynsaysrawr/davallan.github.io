@@ -32,6 +32,11 @@ body {
     -ms-box-sizing: border-box;
     color: white;
     background-repeat: repeat;
+    background-image: url(images/skyline.svg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 .section1 {
