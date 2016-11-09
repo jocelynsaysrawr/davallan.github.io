@@ -63,8 +63,8 @@ body {
     position: fixed;
     z-index: 1000;
     color: #bbbbbb;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     display: block;
     bottom: 0px;
     right: 24px;
