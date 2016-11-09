@@ -72,11 +72,7 @@ $(document).ready(function(){
             }
         });
         
-        if(topDoc < -80){
-            $('.me-wrapper').fadeOut('fast');
-        } else {
-            $('.me-wrapper').fadeIn('fast');
-        }
+    
     });
     
     
