@@ -1,5 +1,5 @@
 *{
--webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+-webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 }
 
 body {
@@ -30,7 +30,6 @@ body {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     color: white;
-    background-image: url(images/skyline.svg);
     background-size: 100%;
     background-attachment: local;
     background-position: bottom;
@@ -39,22 +38,27 @@ body {
 
 .section1 {
     background-color: #7e57c2;
+    background-image: url(images/mountain.svg);
 }
 
 .section2 {
     background-color: #ffa000;
+    background-image: url(images/skyline.svg);
 }
 
 .section3 {
     background-color: #339972;
+    background-image: url(images/skyline.svg);
 }
 
 .section4 {
-    
+    background-image: url(images/skyline.svg);
 }
 
 .section5 {
     background-color: #ff5722;
+    background-image: url(images/skyline.svg);
+
 }
 
 .section6 {
@@ -201,7 +205,7 @@ body {
     .section h1 {
         font-size: 24px;
     }
-    
+
     .section p {
         font-size: .85em;
     }
