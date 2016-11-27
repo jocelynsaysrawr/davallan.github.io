@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
-    var horn = document.getElementById('hornaudio');
-
-    $('#horn').click(function(){
-        console.log('play horn');
-        horn.play();
+    $('.button').click(function(){
+        var thisID = $(this).attr('id');
+        var audioID = thisID + 'audio';
+        var audio = document.getElementById(audioID);
+        console.log('play' + thisID);
+        audio.play();
         return false;
     });
 });
