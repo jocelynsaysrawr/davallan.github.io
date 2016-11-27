@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var horn = $('#hornaudio');
+    var horn = document.getElementById('hornaudio');
 
     $('#horn').click(function(){
         console.log('play horn');
