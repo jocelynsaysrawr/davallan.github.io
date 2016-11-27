@@ -1,10 +1,10 @@
 // this is davallan.js
 
 $(document).ready(function(){
-    
+
     var minOrder = $('.section').first().data('order');
     var maxOrder = $('.section').last().data('order');
-    
+
     function navHideShow() {
         if($('.nav-up').data('order') == '0'){
             $('.nav-up').hide();
@@ -18,11 +18,11 @@ $(document).ready(function(){
             $('.nav-down').show();
         }
     }
-    
+
     navHideShow();
-    
+
     console.log(minOrder + ' ' + maxOrder);
-    
+
     $('.nav').click(function(event){
         var eventTarget = $(event.target);
         var thisOrder = $(this).data('order');
@@ -31,7 +31,7 @@ $(document).ready(function(){
             $('html, body').animate({
                 scrollTop: target.offset().top
             }, 800);
-            
+
 //            $('.nav').each(function(i){
 //                var order = $(this).data('order');
 //                $(this).data('order', order+1);
@@ -47,9 +47,9 @@ $(document).ready(function(){
         } else {
             // do nothing
         }
-    
+
     });
-    
+
     $(document).on('scroll',function(){
         var topDoc = $('body,html').offset().top - $(window).scrollTop();
         $('.section').each(function(i){
@@ -71,13 +71,17 @@ $(document).ready(function(){
                 }
             }
         });
-        
-    
+
+        $('#horn').click(function(){
+            $('#hornaudio').play();
+            return false;
+        });
+
     });
-    
-    
-    
-    
+
+
+
+
 //    function launchFullScreen(element) {
 //      if(element.requestFullScreen) {
 //        element.requestFullScreen();
@@ -87,10 +91,10 @@ $(document).ready(function(){
 //        element.webkitRequestFullScreen();
 //      }
 //    }
-//    
+//
 //    $('.icofont').click(function(){
 //        console.log('full');
-//       launchFullScreen(document.body); 
+//       launchFullScreen(document.body);
 //    });
-    
+
 });
