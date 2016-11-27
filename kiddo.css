@@ -1,14 +1,27 @@
+body {
+    margin: 0px;
+}
+
 .buttons-wrapper {
     display: block;
     width: 100vw;
+    max-width: 600px;
     overflow: hidden;
+    margin: auto;
     text-align: center;
+    margin-top: 20px;
+    box-sizing: border-box;
 }
 
-.button {
+.audio-button {
     display: inline-block;
     vertical-align: top;
-    width: 48vw;
+    width: 250px;
+    height: 150px;
     box-sizing: border-box;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    background-size: cover;
+    background-color: royalblue;
+    background-position: center;
+    border-radius: 5px;
 }
