@@ -1,7 +1,10 @@
 $(document).ready(function(){
+
+    var horn = $('#hornaudio');
+
     $('#horn').click(function(){
         console.log('play horn');
-        $('#hornaudio').play();
+        horn.play();
         return false;
     });
 });
