@@ -1,12 +1,12 @@
 .buttons-wrapper {
-    display: flex;
+    display: block;
     width: 100%;
     overflow: hidden;
-    align-items: center;
+    text-align: center;
 }
 
 .button {
-    display: block;
-    width: 50%;
+    display: inline-block;
+    width: 48%;
     box-sizing: border-box;
 }
