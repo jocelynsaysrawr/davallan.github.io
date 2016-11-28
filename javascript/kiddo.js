@@ -17,6 +17,7 @@ $(document).ready(function(){
 
     $('.full-it').click(function(){
         launchIntoFullscreen(document.documentElement);
+        $(this).fadeOut();
     });
 
     function launchIntoFullscreen(element) {
