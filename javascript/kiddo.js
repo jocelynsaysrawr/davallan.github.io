@@ -14,4 +14,21 @@ $(document).ready(function(){
         audio.play();
         return false;
     });
+
+    $('.full-it').click(function(){
+        launchIntoFullscreen(document.documentElement);
+    });
+
+    function launchIntoFullscreen(element) {
+      if(element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if(element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if(element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if(element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
+    }
+
 });
