@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background-color: black;
+    background-color: #212121;
 }
 
 .buttons-wrapper {
@@ -24,15 +24,14 @@ body {
     background-size: cover;
     background-color: royalblue;
     background-position: center;
-    border-radius: 5px;
 }
 
 .full-it {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background: white;
-    padding: 6px;
-    border-radius: 5px;
-    color: gray;
+    background: #4caf50;
+    padding: 12px;
+    border-radius: 2px;
+    color: white;
 }
