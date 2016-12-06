@@ -3,7 +3,7 @@
 }
 
 body {
-    background: royalblue;
+    background: #f4f4f4;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
     overflow-y: auto;
@@ -232,25 +232,78 @@ body {
     margin-right: 6px;
 }
 
-/*
-.attr-link {
-    display: block;
-    font-size: .5em;
-    text-transform: uppercase;
-    z-index: 1000;
-    margin-left: 5px;
-    color: gray;
-    text-decoration: none;
-    margin-top: -13px;
-}
-*/
-/*
-.header {
-    display: block;
-    background-color: #f4f4f4;
-    min-height: 40px;
+
+/* ---------- ALT STYLE --------------------------------------*/
+
+.sticky-header {
+    display: inline-block;
+    overflow: hidden;
+    background: #f4f4f4;
     position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-}*/
+    top: 20px;
+    left: 20px;
+    border-radius: 50px;
+    border: solid 2px white;
+}
+
+.hover-shadow {
+    -webkit-box-shadow: 0px 8px 32px -3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 8px 32px -3px rgba(0,0,0,0.3);
+    box-shadow: 0px 8px 32px -3px rgba(0,0,0,0.3);
+}
+
+.menu-logo {
+    display: block;
+    height: 50px;
+    float: left;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.menu-icon {
+    color: white;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #00bcd4;
+}
+
+.menu {
+    display: display: inline-block;;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.menu-item {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    width: 0px;
+    transition: ease .25s;
+    -webkit-transition: ease .25s;
+    -moz-transition: ease .25s;
+    -ms-transition: ease .25s;
+    -o-transition: ease .25s;
+    cursor: pointer;
+    color: transparent;
+    font-size: .8em;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.menu-item.open:first-child {
+    margin-left: 12px;
+}
+
+.menu-item.open {
+    padding: 0px 12px;
+    width: auto;
+    color: gray;
+}
+
+.menu-item:hover {
+    background-color: orangered;
+    color: white;
+}

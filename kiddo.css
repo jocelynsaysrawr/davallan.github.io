@@ -16,11 +16,11 @@ body {
 .audio-button {
     display: inline-block;
     vertical-align: top;
-    width: 48%;
+    width: 45%;
     height: 24vh;
     box-sizing: border-box;
-    margin-bottom: .5vh;
     margin-top: .5vh;
+    margin-bottom: .5vh;
     background-size: cover;
     background-color: royalblue;
     background-position: center;
