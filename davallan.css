@@ -244,6 +244,7 @@ body {
     right: 20px;
     border-radius: 50px;
     border: solid 2px white;
+    z-index: 1000;
 }
 
 .hover-shadow {
@@ -317,4 +318,54 @@ body {
 .menu-item.open:hover {
     background-color: orangered;
     color: white;
+}
+
+.section {
+    width: 100vw;
+    background: lightgray;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section.home {
+    position: relative;
+    height: 56.25vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+}
+
+.video-bg video {
+    width: 100vw;
+}
+
+.overlay-content {
+    color: white;
+    width: 100vw;
+    height: 56.25vw;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url('images/debut-light.png');
+    background-repeat: repeat;
+    background-color: rgba(121, 85, 72, 0.5);
+}
+
+.content-wrapper {
+    display: block;
+    overflow: hidden;
+    width: 96%;
+    max-width: 600px;
 }
