@@ -240,8 +240,8 @@ body {
     overflow: hidden;
     background: #f4f4f4;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    bottom: 20px;
+    right: 20px;
     border-radius: 50px;
     border: solid 2px white;
 }
@@ -256,12 +256,13 @@ body {
     display: flex;
     width: 50px;
     height: 50px;
-    float: left;
+    float: right;
     border-radius: 50px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
     background-color: #00bcd4;
+    cursor: pointer;
 }
 
 .menu-icon {
@@ -294,8 +295,8 @@ body {
     border-radius: 2px;
 }
 
-.menu-item.open:first-child {
-    margin-left: 12px;
+.menu-item.open:last-child {
+    margin-right: 12px;
 }
 
 .menu-item.open {
@@ -308,7 +309,7 @@ body {
     background-color: #f44336;
 }
 
-.menu-item:hover {
+.menu-item.open:hover {
     background-color: orangered;
     color: white;
 }

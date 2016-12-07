@@ -5,7 +5,6 @@ $(document).ready(function(){
         $('.menu-icon').toggleClass('icofont-close');
         $('.menu-icon').toggleClass('icofont-navigation-menu');
         $('.menu-logo').toggleClass('open');
-        $('.menu-logo').css('transform','rotate(360deg)');
     });
 
 });
