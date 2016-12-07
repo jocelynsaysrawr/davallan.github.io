@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-    $('.sticky-header').mouseenter(function(){
-        $('.menu-item').addClass('open');
-    });
-
-    $('.sticky-header').mouseleave(function(){
-        $('.menu-item').removeClass('open');
+    $('.sticky-header').click(function(){
+        $('.menu-item').toggleClass('open');
+        $('.menu-icon').toggleClass('icofont-close');
+        $('.menu-icon').toggleClass('icofont-navigation-menu');
+        $('.menu-logo').toggleClass('open');
+        $('.menu-logo').css('transform','rotate(360deg)');
     });
 
 });

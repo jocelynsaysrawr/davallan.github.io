@@ -304,6 +304,10 @@ body {
     color: gray;
 }
 
+.menu-logo.open {
+    background-color: #f44336;
+}
+
 .menu-item:hover {
     background-color: orangered;
     color: white;
