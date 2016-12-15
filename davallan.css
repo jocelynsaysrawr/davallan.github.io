@@ -2,6 +2,7 @@ body {
     background-color: #f4f4f4;
     padding: 0px;
     margin: 0px;
+    font-family: "Roboto", sans-serif;
 }
 
 .section {
@@ -30,4 +31,25 @@ body {
 .intro h1 {
     color: rgba(0,0,0,0.5);
     width: 100%;
+    font-family: 'Shrikhand', serif;
+}
+
+.post-wrapper {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 24px;
+    background: white;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    color: gray;
+}
+
+.post-wrapper .title {
+    font-size: 2em;
+    width: 100%;
+    display: block;
+    margin-bottom: 6px;
+    font-family: 'Shrikhand', serif;
 }
