@@ -37,6 +37,11 @@ body {
 .long-msg {
     font-size: 35px;
     color: white;
+    transition: ease .5s;
+    -webkit-transition: ease .5s;
+    -moz-transition: ease .5s;
+    -ms-transition: ease .5s;
+    -o-transition: ease .5s;
 }
 
 .blinker {
@@ -51,6 +56,10 @@ body {
     animation-iteration-count: infinite;
     animation-duration: 1s;
     vertical-align: middle;
+}
+
+.highlight {
+    color: orangered;
 }
 
 @keyframes border-blink {

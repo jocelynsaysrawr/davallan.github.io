@@ -1,9 +1,19 @@
 var time = ['3','2','1'];
-var mytext = "That's all the time you have to make a first impression online.";
+var mytext = "You have about three seconds to make a first impression online.";
 var gNum = 0;
 var timeNext = 0;
 var nextString = '';
+var words = ['impression', 'You', 'three'];
+
 $(document).ready(function(){
+
+    function highlight(element,wordsArray){
+        var text = $('.' + element).html();
+        $.each(wordsArray, function(i){
+            text = text.replace(wordsArray[i], '<span class="highlight">'+ wordsArray[i] +'</span>');
+        });
+        $('.' + element).html(text);
+    };
 
     $.each(time, function(i){
         setTimeout(function(){
@@ -27,9 +37,15 @@ $(document).ready(function(){
             setTimeout(function () {
                 nextString += thisChar;
                 $('.long-msg').html(nextString + '<span class="blinker"></span>');
+                highlight('long-msg', words);
             }, timeNext + gNum);
             timeNext += gNum;
         });
     }, 3500);
+
+
+
+
+
 
 }); // End DocReady
