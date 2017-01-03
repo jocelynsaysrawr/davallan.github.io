@@ -1,8 +1,6 @@
 var time = ['3','2','1'];
 var mytext = "You have about three seconds to make a first impression online.";
-var gNum = 0;
-var timeNext = 0;
-var nextString = '';
+var moretext = 'Hello There mister';
 var words = ['impression', 'You', 'three'];
 
 $(document).ready(function(){
@@ -22,30 +20,37 @@ $(document).ready(function(){
     });
 
     setTimeout(function () {
-        $('body').css('background-color','#444444');
+        $('body').css('background-color','#212121');
         $('.timer').html('');
     }, 3000);
 
-    setTimeout(function () {
-        $('.timer').append('<span class="long-msg"></span>');
-        var chars = mytext.split('');
-
-        $.each(chars, function (b) {
-            var thisChar = chars[b].toString();
-            gNum = Math.floor(Math.random() * 80) + 10;
-            if(chars[b] == ' '){ gNum *= 2}
-            setTimeout(function () {
-                nextString += thisChar;
-                $('.long-msg').html(nextString + '<span class="blinker"></span>');
-                highlight('long-msg', words);
-            }, timeNext + gNum);
-            timeNext += gNum;
-        });
-    }, 3500);
+    function write(writeText, element) {
+        var gNum = 0;
+        var timeNext = 0;
 
 
+        setTimeout(function () {
+            $('.'+ element).append('<span class="long-msg"></span>');
+            var chars = writeText.split('');
+            var nextString = '';
+            $.each(chars, function (b) {
+                var thisChar = chars[b].toString();
+                gNum = Math.floor(Math.random() * 80) + 10;
+                if(chars[b] == ' '){ gNum *= 2}
+                setTimeout(function () {
+                    nextString += thisChar;
+                    $('.long-msg').html(nextString + '<span class="blinker"></span>');
+                    highlight('long-msg', words);
+                }, timeNext + gNum);
+                timeNext += gNum;
+            });
+        }, 3500);
+    }
 
+    write(mytext, 'timer');
 
-
+    setTimeout(function(){
+        $('.hero').append('<span class="button">Learn More</span>');
+    },8000);
 
 }); // End DocReady

@@ -2,7 +2,7 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: "Roboto", sans-serif;
-    background-color: #f4f4f4;
+    background-color: #7e57c2;
     transition: ease .25s;
     -webkit-transition: ease .25s;
     -moz-transition: ease .25s;
@@ -22,8 +22,34 @@ body {
 .hero {
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hero .button {
+    background: #7e57c2;
+    padding: 12px 24px;
+    border-radius: 2px;
+    color: #212121;
+    font-size: 1.25em;
+    cursor: pointer;
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slide-in {
+    from {
+        height: 0px;
+        padding: 0px;
+        opacity: 0;
+    }
+    to {
+        height: auto;
+        padding: 12px 24px;
+        opacity: 1;
+    }
 }
 
 .timer {
@@ -31,12 +57,12 @@ body {
     padding: 24px;
     font-size: 200px;
     font-weight: bold;
-    color: orangered;
+    color: #f4f4f4;
 }
 
 .long-msg {
     font-size: 35px;
-    color: white;
+    color: #aaaaaa;
     transition: ease .5s;
     -webkit-transition: ease .5s;
     -moz-transition: ease .5s;
@@ -59,17 +85,17 @@ body {
 }
 
 .highlight {
-    color: orangered;
+    color: #7e57c2;
 }
 
 @keyframes border-blink {
     0% {
-        background-color: orangered;
+        background-color: #7e57c2;
     }
     50% {
         background-color: transparent;
     }
     100% {
-        background-color: orangered;
+        background-color: #7e57c2;
     }
 }
