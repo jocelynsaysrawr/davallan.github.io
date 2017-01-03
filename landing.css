@@ -1,0 +1,66 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    transition: ease .25s;
+    -webkit-transition: ease .25s;
+    -moz-transition: ease .25s;
+    -ms-transition: ease .25s;
+    -o-transition: ease .25s;
+}
+
+.hero-wrapper {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    box-sizing: border-box;
+    padding: 24px;
+    font-size: 200px;
+    font-weight: bold;
+    color: orangered;
+}
+
+.long-msg {
+    font-size: 35px;
+    color: white;
+}
+
+.blinker {
+    display: inline-block;
+    background-color: white;
+    margin-left: 5px;
+    height: 35px;
+    width: 15px;
+    box-sizing: border-box;
+    animation-name: border-blink;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    vertical-align: middle;
+}
+
+@keyframes border-blink {
+    0% {
+        background-color: orangered;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: orangered;
+    }
+}
