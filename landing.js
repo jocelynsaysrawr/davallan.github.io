@@ -20,7 +20,7 @@ $(document).ready(function(){
     });
 
     setTimeout(function () {
-        $('body').css('background-color','#212121');
+        $('.hero-wrapper').css('background-color','#212121');
         $('.timer').html('');
     }, 3000);
 
