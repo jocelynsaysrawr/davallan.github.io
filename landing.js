@@ -1,7 +1,7 @@
 var time = ['3','2','1'];
 var mytext = "You have about three seconds to make a first impression online.";
 var moretext = 'Hello There mister';
-var words = ['impression', 'You', 'three'];
+var words = ['impression', 'You', 'three', 'seconds', 'first'];
 
 $(document).ready(function(){
 
