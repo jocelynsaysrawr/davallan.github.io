@@ -13,7 +13,6 @@
         background: #fff;
         margin: 0px;
     }
-
     .form-wrapper {
         display: flex;
         flex-direction: row;
@@ -21,11 +20,9 @@
         align-items: center;
         justify-content: flex-start;
     }
-
     .info-form-wrapper {
         width: 40%;
     }
-
     .info-form {
         display: block;
         padding: 48px;
@@ -33,7 +30,6 @@
         min-height: 100vh;
         background: #03a9f4;
     }
-
     .info-form input{
         display: inline-block;
         width: 100%;
@@ -46,7 +42,6 @@
         font-weight: bold;
         font-size: 1.5em;
     }
-
     label {
         display: block;
         box-sizing: border-box;
@@ -55,7 +50,6 @@
         font-size: .8em;
         font-weight: bold;
     }
-
     .signature-wrapper{
         display: flex;
         flex-direction: column;
@@ -65,7 +59,6 @@
         width: 60%;
         box-sizing: border-box;
     }
-
     .copycode {
         padding: 12px 24px;
         color: #c1c1c1;
@@ -73,11 +66,9 @@
         border-radius: 2px;
         margin-top: 12px;
         cursor: pointer;
-        display: none;
         width: 80%;
         max-width: 350px;
     }
-
     .signature-show {
         padding: 48px;
         box-sizing: border-box;
@@ -89,7 +80,6 @@
         box-sizing: border-box;
         margin-top: 12px;
     }
-
     .toggle {
         color: white;
         padding: 6px;
@@ -99,11 +89,9 @@
         -webkit-user-select: none;
         -ms-user-select: none;
     }
-
     .toggle.off {
         color: rgba(0,0,0,0.15) !important;
     }
-
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
       color: rgba(255,255,255,0.25);
     }
@@ -116,22 +104,17 @@
     :-moz-placeholder { /* Firefox 18- */
       color: rgba(255,255,255,0.25);
     }
-
     input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0 1000px #03a9f4 inset !important;
         -webkit-text-fill-color: #fff;
     }
-
     input:-webkit-autofill:focus {
         -webkit-box-shadow: 0 0 0 1000px #03a9f4 inset !important;
         -webkit-text-fill-color: #fff;
     }
-
     input:focus {
         outline:none;
     }
-
-
 </style>
 
 <script>
@@ -153,19 +136,12 @@
 
     $(document).ready(function(){
 
+        genCode();
+
         $('input').keyup(function(e){
             if (e.ctrlKey) alert("control");
             genCode();
         });
-
-        // $('.copycode').click(function(){
-        //     var aux = document.createElement("input");
-        //      aux.setAttribute("value", document.getElementById('code').innerHTML);
-        //      document.body.appendChild(aux);
-        //      aux.select();
-        //      document.execCommand("copy");
-        //      document.body.removeChild(aux);
-        // });
 
         $('.toggle').click(function(){
             var thisTog = $(this);
@@ -176,14 +152,12 @@
             if(thisTog.hasClass('bg')){
                 (thisTog.hasClass('bg') && thisTog.hasClass('off') ? bg = false : bg = true);
             }
-
             genCode();
         });
 
         function genCode(){
 
-            $('.copycode').fadeIn();
-
+            // $('.copycode').fadeIn();
             fullName = $('#fullName').val();
             phoneMobile = $('#phoneMobile').val();
             phoneOffice = $('#phoneOffice').val();
@@ -196,8 +170,7 @@
             jobTitle = $('#jobTitle').val();
             companyUrl = $('#companyUrl').val();
             imgUrl = $('#imgUrl').val();
-
-             postCode =
+            postCode =
                 '<table cellpadding="6" cellspacing="0" border="0" style="background:' + (bg ? '#f4f4f4;' : 'none;') + 'border-width: 0px; border: 0px; margin: 0; margin-top: 24px; padding: 3px; color: #656565;">' +
                 '<tr>'+
                     (imgUrl.length > 0 && img ?
@@ -221,14 +194,9 @@
                     '</td>'+
                 '</tr>'+
                 '</table>';
-
-
             $('.signature-show').html(postCode);
-
         };
-
     });
-
 </script>
 
 <body>
