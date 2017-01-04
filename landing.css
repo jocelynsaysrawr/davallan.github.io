@@ -3,11 +3,6 @@ body {
     margin: 0px;
     font-family: "Roboto", sans-serif;
     background-color: #f4f4f4;
-    transition: ease .25s;
-    -webkit-transition: ease .25s;
-    -moz-transition: ease .25s;
-    -ms-transition: ease .25s;
-    -o-transition: ease .25s;
 }
 
 .hero-wrapper {
@@ -18,6 +13,11 @@ body {
     justify-content: center;
     align-items: center;
     background: #7e57c2;
+    transition: ease .25s;
+    -webkit-transition: ease .25s;
+    -moz-transition: ease .25s;
+    -ms-transition: ease .25s;
+    -o-transition: ease .25s;
 }
 
 .hero {
@@ -26,6 +26,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 600px;
 }
 
 .hero .button {

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SigGen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #fff;
+        margin: 0px;
+    }
+
+    .form-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .info-form-wrapper {
+        width: 40%;
+    }
+
+    .info-form {
+        display: block;
+        padding: 48px;
+        box-sizing: border-box;
+        min-height: 100vh;
+        background: #03a9f4;
+    }
+
+    .info-form input{
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        /*background: rgba(255,255,255,0.25);*/
+        background: transparent;
+        border: none;
+        color: white;
+        border-bottom: 12px solid #03a9f4;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    label {
+        display: block;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        color: rgba(255,255,255,.75);
+        font-size: .8em;
+        font-weight: bold;
+    }
+
+    .signature-wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        box-sizing: border-box;
+    }
+
+    .copycode {
+        padding: 12px 24px;
+        color: #c1c1c1;
+        font-size: .8em;
+        border-radius: 2px;
+        margin-top: 12px;
+        cursor: pointer;
+        display: none;
+        width: 80%;
+        max-width: 350px;
+    }
+
+    .signature-show {
+        padding: 48px;
+        box-sizing: border-box;
+        padding-top: 24px;
+    }
+
+    .toggles {
+        display: block;
+        box-sizing: border-box;
+        margin-top: 12px;
+    }
+
+    .toggle {
+        color: white;
+        padding: 6px;
+        cursor: pointer;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .toggle.off {
+        color: rgba(0,0,0,0.15) !important;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(255,255,255,0.25);
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: rgba(255,255,255,0.25);
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: rgba(255,255,255,0.25);
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: rgba(255,255,255,0.25);
+    }
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px #03a9f4 inset !important;
+        -webkit-text-fill-color: #fff;
+    }
+
+    input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 1000px #03a9f4 inset !important;
+        -webkit-text-fill-color: #fff;
+    }
+
+    input:focus {
+        outline:none;
+    }
+
+
+</style>
+
+<script>
+    var fullName = '';
+    var phoneMobile = '';
+    var phoneOffice = '';
+    var fax = '';
+    var website = '';
+    var department = '';
+    var companyName = '';
+    var phone = '';
+    var email = '';
+    var jobTitle = '';
+    var companyUrl = '';
+    var postCode = '';
+    var imgUrl = '';
+    var bg = true;
+    var img = true;
+
+    $(document).ready(function(){
+
+        $('input').keyup(function(e){
+            if (e.ctrlKey) alert("control");
+            genCode();
+        });
+
+        // $('.copycode').click(function(){
+        //     var aux = document.createElement("input");
+        //      aux.setAttribute("value", document.getElementById('code').innerHTML);
+        //      document.body.appendChild(aux);
+        //      aux.select();
+        //      document.execCommand("copy");
+        //      document.body.removeChild(aux);
+        // });
+
+        $('.toggle').click(function(){
+            var thisTog = $(this);
+            thisTog.toggleClass('off');
+            if(thisTog.hasClass('img')){
+                (thisTog.hasClass('img') && thisTog.hasClass('off') ? img = false : img = true);
+            }
+            if(thisTog.hasClass('bg')){
+                (thisTog.hasClass('bg') && thisTog.hasClass('off') ? bg = false : bg = true);
+            }
+
+            genCode();
+        });
+
+        function genCode(){
+
+            $('.copycode').fadeIn();
+
+            fullName = $('#fullName').val();
+            phoneMobile = $('#phoneMobile').val();
+            phoneOffice = $('#phoneOffice').val();
+            fax = $('#fax').val();
+            website = $('#website').val();
+            department = $('#department').val();
+            companyName = $('#companyName').val();
+            phone = $('#phone').val();
+            email = $('#email').val();
+            jobTitle = $('#jobTitle').val();
+            companyUrl = $('#companyUrl').val();
+            imgUrl = $('#imgUrl').val();
+
+             postCode =
+                '<table cellpadding="6" cellspacing="0" border="0" style="background:' + (bg ? '#f4f4f4;' : 'none;') + 'border-width: 0px; border: 0px; margin: 0; margin-top: 24px; padding: 3px; color: #656565;">' +
+                '<tr>'+
+                    (imgUrl.length > 0 && img ?
+                        '<td style="vertical-align:middle;">'+
+                        '<img style="max-width: 85px;" src="' + imgUrl + '" />'+
+                        '</td>' : '') +
+                    '<td style="vertical-align:middle;">'+
+                        '<table cellpadding="0" cellspacing="0" border="0" style="background: none; border-width: 0px; border: 0px; margin: 0;">' +
+                            '<tr><td colspan="2" style="padding-bottom: 5px; color: #656565; font-size: 16px; font-family: Arial, Helvetica, sans-serif; font-weight:bold;">' + fullName + '</td></tr>' +
+                            '<tr><td colspan="2" style="color: #656565; font-size: 12px; font-family: Arial, Helvetica, sans-serif;"><i>' + jobTitle + '</i></td></tr>' +
+                            '<tr><td colspan="2" style="color: #656565; padding-bottom: 5px; font-size: 12px; font-family: Arial, Helvetica, sans-serif;">' + (department.length > 0 ? department + ', ' : '')  + '<strong>' + companyName + '</strong></td></tr>' +
+                            '<tr>' +
+                                (phoneOffice.length > 0 ? '<td style="white-space: nowrap; padding-right: 6px; padding-bottom: 2px; color: #656565; font-size: 12px; font-family: Arial, Helvetica, sans-serif;">O: ' + phoneOffice + '</td>' : '') +
+                                (phoneMobile.length > 0 ? '<td style="white-space: nowrap; padding-right: 6px; padding-bottom: 2px; color: #656565; font-size: 12px; font-family: Arial, Helvetica, sans-serif;">M: ' + phoneMobile + '</td>' : '') +
+                            '</tr>' +
+                            '<tr>'+
+                                (fax.length > 0 ? '<td style="white-space: nowrap; padding-right: 6px; padding-bottom: 2px; color: #656565; font-size: 12px; font-family: Arial, Helvetica, sans-serif;">F: ' + fax + '</td>' : '' ) +
+                                (companyUrl.length > 0 ? '<td style="white-space: nowrap; padding-right: 6px; padding-bottom: 2px; color: #656565; font-size: 12px; font-family: Arial, Helvetica, sans-serif;">W: ' + companyUrl + '</td>' : '') +
+                            '</tr>' +
+                        '</table>'+
+                    '</td>'+
+                '</tr>'+
+                '</table>';
+
+
+            $('.signature-show').html(postCode);
+
+        };
+
+    });
+
+</script>
+
+<body>
+    <div class='form-wrapper'>
+        <div class='info-form-wrapper'>
+            <form class='info-form'>
+                <label for='fullName'>Full Name</label>
+                <input required type='text' name='fullName' id='fullName' placeholder="Full Name..." value=''/>
+                <label for='email'>Email</label>
+                <input required type='email' name='email' id='email' placeholder="Email..." value=''/>
+                <label for='phoneMobile'>Mobile Phone</label>
+                <input type='tel' name='phoneMobile' id='phoneMobile' placeholder="Mobile Phone..." value=''/>
+                <label for='phoneOffice'>Office Phone</label>
+                <input type='tel' name='phoneOffice' id='phoneOffice' placeholder="Office Phone..." value=''/>
+                <label for='fax'>Fax Number</label>
+                <input type='tel' name='fax' id='fax' placeholder="Fax..." value=''/>
+                <label for='department'>Your Department</label>
+                <input type='text' name='department' id='department' placeholder="Department..." value=''/>
+                <label for='jobTitle'>Job Title</label>
+                <input type='text' name='jobTitle' id='jobTitle' placeholder="Job Title..." value=''/>
+                <label for='companyName'>Company Name</label>
+                <input type='text' name='companyName' id='companyName' placeholder="Company..." value="Bargreen Ellingson"/>
+                <label for='companyUrl'>Website</label>
+                <input type='url' name='compnayUrl' id='companyUrl' placeholder="Website..." value="bargreen.com"/>
+                <!-- <label for='imgUrl'>Logo Url</label> -->
+                <input type='hidden' name='imgUrl' id='imgUrl' placeholder="Paste Url..." value="https://www.bargreen.com/skin/frontend/ultimo/bargreen/images/logo-large.png"/>
+                <input type='hidden' name='copyField' id='copyField' value=""/>
+                <span class='toggles'>
+                    <i class="toggle img material-icons">&#xE410;</i>
+                    <i class="toggle bg material-icons">&#xE23A;</i>
+                </span>
+            </form>
+        </div>
+
+        <div class='signature-wrapper'>
+            <div class='signature-show'id='code'></div>
+            <div class='copycode'>When you have created the desired signature, click and drag your cursor to select the entire content of <thead>
+                box; then paste it into your Gmail signature field.
+            </thead></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

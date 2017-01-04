@@ -2,6 +2,7 @@ var time = ['3','2','1'];
 var mytext = "You have about three seconds to make a first impression online.";
 var moretext = 'Hello There mister';
 var words = ['impression', 'You', 'three', 'seconds', 'first'];
+var heroBG = ['#00bcd4','#2196f3','#7e57c2'];
 
 $(document).ready(function(){
 
@@ -16,41 +17,42 @@ $(document).ready(function(){
     $.each(time, function(i){
         setTimeout(function(){
             $('.timer').html(time[i]);
+            // $('.hero-wrapper').css('background', heroBG[i]);
         },i*1000);
     });
 
-    setTimeout(function () {
-        $('.hero-wrapper').css('background-color','#212121');
-        $('.timer').html('');
-    }, 3000);
-
-    function write(writeText, element) {
-        var gNum = 0;
-        var timeNext = 0;
-
-
-        setTimeout(function () {
-            $('.'+ element).append('<span class="long-msg"></span>');
-            var chars = writeText.split('');
-            var nextString = '';
-            $.each(chars, function (b) {
-                var thisChar = chars[b].toString();
-                gNum = Math.floor(Math.random() * 80) + 10;
-                if(chars[b] == ' '){ gNum *= 2}
-                setTimeout(function () {
-                    nextString += thisChar;
-                    $('.long-msg').html(nextString + '<span class="blinker"></span>');
-                    highlight('long-msg', words);
-                }, timeNext + gNum);
-                timeNext += gNum;
-            });
-        }, 3500);
-    }
-
-    write(mytext, 'timer');
-
-    setTimeout(function(){
-        $('.hero').append('<span class="button">Learn More</span>');
-    },8000);
+    // setTimeout(function () {
+    //     $('.hero-wrapper').css('background-color','#212121');
+    //     $('.timer').html('');
+    // }, 3000);
+    //
+    // function write(writeText, element) {
+    //     var gNum = 0;
+    //     var timeNext = 0;
+    //
+    //
+    //     setTimeout(function () {
+    //         $('.'+ element).append('<span class="long-msg"></span>');
+    //         var chars = writeText.split('');
+    //         var nextString = '';
+    //         $.each(chars, function (b) {
+    //             var thisChar = chars[b].toString();
+    //             gNum = Math.floor(Math.random() * 80) + 10;
+    //             if(chars[b] == ' '){ gNum *= 2}
+    //             setTimeout(function () {
+    //                 nextString += thisChar;
+    //                 $('.long-msg').html(nextString + '<span class="blinker"></span>');
+    //                 highlight('long-msg', words);
+    //             }, timeNext + gNum);
+    //             timeNext += gNum;
+    //         });
+    //     }, 3500);
+    // }
+    //
+    // write(mytext, 'timer');
+    //
+    // setTimeout(function(){
+    //     $('.hero').append('<span class="button">Learn More</span>');
+    // },8000);
 
 }); // End DocReady
