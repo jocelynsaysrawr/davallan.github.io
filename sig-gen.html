@@ -133,6 +133,7 @@
     var imgUrl = '';
     var bg = true;
     var img = true;
+    var tagLine = true;
 
     $(document).ready(function(){
 
@@ -151,6 +152,9 @@
             }
             if(thisTog.hasClass('bg')){
                 (thisTog.hasClass('bg') && thisTog.hasClass('off') ? bg = false : bg = true);
+            }
+            if(thisTog.hasClass('tl')){
+                (thisTog.hasClass('tl') && thisTog.hasClass('off') ? tagLine = false : tagLine = true);
             }
             genCode();
         });
@@ -193,6 +197,9 @@
                         '</table>'+
                     '</td>'+
                 '</tr>'+
+                (tagLine ?
+                '<tr><td colspan="2" style="color: #afafaf; text-align: left; padding-top:0px; font-size: 14px; font-style: italic;">Serving Those Who Serve Others!</td></tr>'
+                : '') +
                 '</table>';
             $('.signature-show').html(postCode);
         };
@@ -227,6 +234,7 @@
                 <span class='toggles'>
                     <i class="toggle img material-icons">&#xE410;</i>
                     <i class="toggle bg material-icons">&#xE23A;</i>
+                    <i class="toggle tl material-icons">&#xE22B;</i>
                 </span>
             </form>
         </div>
