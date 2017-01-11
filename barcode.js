@@ -24,6 +24,11 @@ $(document).ready(function(){
           }
           console.log("Initialization finished. Ready to start");
           Quagga.start();
+          Quagga.onDetected(function(result){
+              var code = result.codeResult.code;
+              $('body').append(code);
+          });
     });
 
 });
+
