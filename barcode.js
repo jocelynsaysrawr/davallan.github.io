@@ -9,7 +9,13 @@ $(document).ready(function(){
           target: document.querySelector('#ls')    // Or '#yourElement' (optional)
         },
         decoder : {
-          readers : ["code_128_reader","upc_e","upca_a"]
+            readers : ["code_128_reader","upc_e","upca_a"]
+        },
+        debug: {
+            drawBoundingBox: false,
+            showFrequency: false,
+            drawScanline: true,
+            showPattern: false
         }
         }, function(err) {
           if (err) {
@@ -21,4 +27,3 @@ $(document).ready(function(){
     });
 
 });
-
