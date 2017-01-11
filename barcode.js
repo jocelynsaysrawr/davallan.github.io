@@ -26,9 +26,10 @@ $(document).ready(function(){
           Quagga.start();
           Quagga.onDetected(function(result){
               var code = result.codeResult.code;
-              $('body').append(code);
+              $('#ls').html(code);
           });
     });
 
-});
 
+
+});
