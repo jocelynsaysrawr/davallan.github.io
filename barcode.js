@@ -2,13 +2,20 @@ $(document).ready(function(){
 
     Quagga.init({
         numOfWorkers: 4,
-        locate: false,
+        locate: true,
         inputStream : {
           name : "Live",
           type : "LiveStream",
           constraints: {
                facingMode: "environment",
-             },
+         },
+         area: { // defines rectangle of the detection/localization area
+            top: "0%",    // top offset
+            right: "0%",  // right offset
+            left: "0%",   // left offset
+            bottom: "0%"  // bottom offset
+          },
+          singleChannel: false, // true: only the red color-channel is read
           target: document.querySelector('#ls')    // Or '#yourElement' (optional)
         },
         decoder : {
