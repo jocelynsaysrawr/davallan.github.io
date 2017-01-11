@@ -20,7 +20,8 @@ $(document).ready(function(){
                 showPattern: true
             },
             multiple: false
-        }
+        },
+        debug: true
     }, function(err) {
           if (err) {
               console.log(err);
