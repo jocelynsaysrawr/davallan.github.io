@@ -15,7 +15,7 @@ $(document).ready(function(){
             left: "0%",   // left offset
             bottom: "0%"  // bottom offset
           },
-          singleChannel: false, // true: only the red color-channel is read
+          singleChannel: true, // true: only the red color-channel is read
           target: document.querySelector('#ls')    // Or '#yourElement' (optional)
         },
         decoder : {
