@@ -12,10 +12,10 @@ $(document).ready(function(){
             readers : ["code_128_reader","upc_e","upca_a"]
         },
         debug: {
-            drawBoundingBox: false,
-            showFrequency: false,
+            drawBoundingBox: true,
+            showFrequency: true,
             drawScanline: true,
-            showPattern: false
+            showPattern: true
         }
         }, function(err) {
           if (err) {
