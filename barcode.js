@@ -6,18 +6,22 @@ $(document).ready(function(){
         inputStream : {
           name : "Live",
           type : "LiveStream",
+          constraints: {
+               facingMode: "environment",
+             },
           target: document.querySelector('#ls')    // Or '#yourElement' (optional)
         },
         decoder : {
-            readers : ["code_128_reader","upc_e","upca_a"]
-        },
-        debug: {
-            drawBoundingBox: true,
-            showFrequency: true,
-            drawScanline: true,
-            showPattern: true
+            readers : ["code_128_reader","upc_e","upca_a"],
+            debug: {
+                drawBoundingBox: true,
+                showFrequency: true,
+                drawScanline: true,
+                showPattern: true
+            },
+            multiple: false
         }
-        }, function(err) {
+    }, function(err) {
           if (err) {
               console.log(err);
               return
@@ -27,7 +31,7 @@ $(document).ready(function(){
           Quagga.onDetected(function(result){
               var code = result.codeResult.code;
               $('#ls').html(code);
-          });
+      });
     });
 
 
