@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     Quagga.init({
         numOfWorkers: 4,
-        locate: true,
+        locate: false,
         inputStream : {
           name : "Live",
           type : "LiveStream",
