@@ -43,7 +43,7 @@ $(document).ready(function(){
 
         $.each(posts, function(i){
             $('.bod').append(
-                '<div class="post-wrapper" data-postid="+ posts[i].id +">' +
+                '<div class="post-wrapper" data-postid="'+ posts[i].id +'">' +
                     '<h1>' + posts[i].post.title + '</h1>' +
                     '<div class="auth">' + posts[i].author.name + '</div>' +
                     '<div class="thanklist">'+ posts[i].post.body +'</div>' +
