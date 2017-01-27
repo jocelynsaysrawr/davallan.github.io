@@ -242,3 +242,18 @@ textarea:focus {
    -ms-transition: ease .25s;
    -o-transition: ease .25s;
 }
+
+.today-toggle {
+    position: fixed;
+    right: 30px;
+    bottom: 83px;
+    padding: 9px;
+    border-radius: 50%;
+    background: #4794df;
+    color: white;
+    font-size: 18px;
+}
+
+.today-toggle.today-only {
+    background-color: redorange;
+}
