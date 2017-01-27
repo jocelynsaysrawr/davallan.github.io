@@ -70,7 +70,7 @@ $(document).ready(function(){
         } else {
             $('.post-form').css('height','100vh');
             $(this).css('transform','rotate(45deg)').addClass('form-open');
-            $('#body').focus();
+            $('#fullName').focus();
         }
     });
 
