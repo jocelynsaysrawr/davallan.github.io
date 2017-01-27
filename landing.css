@@ -73,7 +73,7 @@ textarea:focus {
 
 @media screen and (max-width: 500px){
     .post-wrapper {
-        width: 90%;
+        width: 100%;
     }
 }
 
