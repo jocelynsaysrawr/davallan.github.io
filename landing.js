@@ -60,11 +60,11 @@ $(document).ready(function(){
             var mo = postda[0];
             var da = postda[1];
             console.log(mo + '=' + months[date.getMonth()] + '   ' + da + '=' + day);
-            var today = 'false';
-            if(mo == months[date.getMonth()] && da == day){today = 'true'}
+            var today = 'past';
+            if(mo == months[date.getMonth()] && da == day){today = 'today'}
             console.log(today);
             $('.bod').append(
-                '<div class="post-wrapper" data-today="'+ today +'" data-postid="'+ posts[i].id +'">' +
+                '<div class="post-wrapper '+ today +'" data-postid="'+ posts[i].id +'">' +
                     '<div class="thanklist">'+ posts[i].post.body +'</div>' +
                     '<div class="auth">' + posts[i].author.name + ' -  ' + posts[i].date +'</div>' +
                 '</div>'
@@ -141,6 +141,16 @@ $(document).ready(function(){
         }
     });
   
-    
+    $('.today-toggle').click(function(){
+        $(this).toggleClass('today-only');
+        if($(this).hasClass('today-only')){
+                $('.past').hide();
+                $('.today').show();
+            } else {
+                $('.past').show();
+                $('.today').show();
+            }
+        });
+    });
     
 });
