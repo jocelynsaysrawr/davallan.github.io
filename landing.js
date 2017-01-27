@@ -1,38 +1,37 @@
 $(document).ready(function(){
-
-    function updatePosts(){
-        
-         $.get("https://api.myjson.com/bins/16kzld", function(data, textStatus, jqXHR) {
-            postList = data;
-            $.ajax({
-                url:"https://api.myjson.com/bins/16kzld",
-                type:"PUT",
-                data: JSON.stringify(postList),
-                contentType:"application/json; charset=utf-8",
-                dataType:"json",
-                success: function(data, textStatus, jqXHR){
-                    console.log(textStatus);
-                    $('.add-post').removeClass('form-open');
-                    $('.post-form').fadeOut();
-                    location.reload();
-                }
-            });
-         });
-    }
-
-    function addPost(){
-        postList.posts.unshift(newPost);
-        if(postList.posts.length > 200){
-            postList.posts.length = 200;
-        }
-        console.log(postList);
-        updatePosts();
-    }
-
+    
     var postList = {};
     var posts = [];
     var postOne = {};
     var newPost = {};
+
+    function updatePosts(){
+        $.ajax({
+            url:"https://api.myjson.com/bins/16kzld",
+            type:"PUT",
+            data: JSON.stringify(postList),
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+            success: function(data, textStatus, jqXHR){
+                console.log(textStatus);
+                $('.add-post').removeClass('form-open');
+                $('.post-form').fadeOut();
+                location.reload();
+            }
+        });
+     });
+
+    function addPost(){
+        $.get("https://api.myjson.com/bins/16kzld", function(data, textStatus, jqXHR) {
+            postList = data;
+            postList.posts.unshift(newPost);
+            if(postList.posts.length > 200){
+                postList.posts.length = 200;
+            }
+            console.log(postList);
+            updatePosts();
+        });
+    }
 
     // GET POSTS FROM MYJSON.com
 
