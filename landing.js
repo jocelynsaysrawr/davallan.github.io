@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     function updatePosts(){
         $.ajax({
-            url:"https://api.myjson.com/bins/qj4cp",
+            url:"https://api.myjson.com/bins/16kzld",
             type:"PUT",
             data: JSON.stringify(postList),
             contentType:"application/json; charset=utf-8",
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
     // GET POSTS FROM MYJSON.com
 
-    $.get("https://api.myjson.com/bins/qj4cp", function(data, textStatus, jqXHR) {
+    $.get("https://api.myjson.com/bins/16kzld", function(data, textStatus, jqXHR) {
         postList = data;
         console.log(postList);
         posts = data.posts;
