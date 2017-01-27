@@ -80,7 +80,7 @@ $(document).ready(function(){
         var year = date.getFullYear();
         var day = date.getDate();
         var month = months[date.getMonth()];
-        var postDate = month + ' ' + ', ' + year;
+        var postDate = month + ' ' + day + ', ' + year;
         var fullName = $('#fullName').val();
         var body = $('#body').val().replace(/(?:\r\n|\r|\n)/g, '<br />');;
         var id = Math.floor((Math.random() * 102425245222) + 1);
