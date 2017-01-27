@@ -94,7 +94,7 @@ $(document).ready(function(){
     });
 
     $('input,textarea').keyup(function(){
-        if($('#postTitle').val() && $('#fullName').val() && $('#body').val().length > 5){
+        if($('#fullName').val() && $('#body').val().length > 5 && $('#pin').val() == 'AM17'){
             $('#submit-post').css('opacity','1');
         } else {
             $('#submit-post').hide('opacity','0');
