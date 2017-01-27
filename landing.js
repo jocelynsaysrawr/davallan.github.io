@@ -4,6 +4,7 @@ $(document).ready(function(){
     var posts = [];
     var postOne = {};
     var newPost = {};
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     
      function findWithAttr(array, attr, value) {
                 for(var i = 0; i < array.length; i += 1) {
@@ -103,6 +104,10 @@ $(document).ready(function(){
     });
 
     $(document).on('click','.post-wrapper', function(){
+        var date = new Date();
+        var year = date.getFullYear();
+        var day = date.getDate();
+        var month = months[date.getMonth()];
         var thisPost = $(this);
         var thisID = thisPost.data('postid');
         var pin = $('#pin').val().toUpperCase();
