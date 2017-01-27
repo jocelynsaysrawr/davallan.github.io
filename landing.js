@@ -59,11 +59,11 @@ $(document).ready(function(){
             var postda = pd.split(' ');
             var mo = postda[0];
             var da = postda[1];
-            var today = false;
-            if(mo == months[date.getMonth()] && da == day){today = true}
-//             console.log(today);
+            var today = 'false';
+            if(mo == months[date.getMonth()] && da == day){today = 'true'}
+            console.log(today);
             $('.bod').append(
-                '<div class="post-wrapper" data-postid="'+ posts[i].id +'">' +
+                '<div class="post-wrapper" data-today="'+ today +'" data-postid="'+ posts[i].id +'">' +
                     '<div class="thanklist">'+ posts[i].post.body +'</div>' +
                     '<div class="auth">' + posts[i].author.name + ' -  ' + posts[i].date +'</div>' +
                 '</div>'
