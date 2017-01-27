@@ -1,66 +1,93 @@
-var time = ['3','2','1'];
-var mytext = "You have about three seconds to make a first impression online.";
-var moretext = 'Hello There mister';
-var words = ['impression', 'You', 'three', 'seconds', 'first'];
-var heroBG = ['#00bcd4','#2196f3','#7e57c2'];
-var bgcolor = 0;
-
 $(document).ready(function(){
 
-    function highlight(element,wordsArray){
-        var text = $('.' + element).html();
-        $.each(wordsArray, function(i){
-            text = text.replace(wordsArray[i], '<span class="highlight">'+ wordsArray[i] +'</span>');
+    function updatePosts(){
+        $.ajax({
+            url:"https://api.myjson.com/bins/qj4cp",
+            type:"PUT",
+            data: JSON.stringify(postList),
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+            success: function(data, textStatus, jqXHR){
+                console.log(textStatus);
+                $('.add-post').removeClass('form-open');
+                $('.post-form').fadeOut();
+                location.reload();
+            }
         });
-        $('.' + element).html(text);
-    };
-
-    $.each(time, function(i){
-        setTimeout(function(){
-            $('.timer').html(time[i]);
-            $('.hero-wrapper').css('background', 'rgba(33, 33, 33,'+ bgcolor +')');
-            bgcolor += 0.25;
-        },i*1000);
-
-    });
-
-    setTimeout(function () {
-        $('.hero-wrapper').css('background', 'rgba(33, 33, 33,'+ bgcolor +')');
-        $('.timer').html('');
-
-    }, 3000);
-
-    function write(writeText, element) {
-        var gNum = 0;
-        var timeNext = 0;
-
-        setTimeout(function () {
-            $('.'+ element).append('<span class="long-msg"></span>');
-            var chars = writeText.split('');
-            var nextString = '';
-            $.each(chars, function (b) {
-                var thisChar = chars[b].toString();
-                gNum = Math.floor(Math.random() * 80) + 10;
-                if(chars[b] == ' '){ gNum *= 2}
-                setTimeout(function () {
-                    nextString += thisChar;
-                    $('.long-msg').html(nextString + '<span class="blinker"></span>');
-                    highlight('long-msg', words);
-                }, timeNext + gNum);
-                timeNext += gNum;
-            });
-        }, 3500);
     }
 
-    write(mytext, 'timer');
+    function addPost(){
+        postList.posts.unshift(newPost);
+        console.log(postList);
+        updatePosts();
+    }
 
-    setTimeout(function(){
-        $('.hero').append('<span class="button learn-more">Learn More</span>');
-    },8000);
+    var postList = {};
+    var posts = [];
+    var postOne = {};
+    var newPost = {};
 
-    $(document).on('click','.learn-more', function(){
-        console.log('hmm. this works');
-        $('.hero-wrapper').height(0);
+    // GET POSTS FROM MYJSON.com
+
+    $.get("https://api.myjson.com/bins/qj4cp", function(data, textStatus, jqXHR) {
+        postList = data;
+        console.log(postList);
+        posts = data.posts;
+        postOne = posts[0];
+
+        $.each(posts, function(i){
+            $('.bod').append(
+                '<div class="post-wrapper">' +
+                    '<h1>' + posts[i].post.title + '</h1>' +
+                    '<div class="auth">' + posts[i].author.name + '</div>' +
+                    '<div class="thanklist">'+ posts[i].post.body +'</div>' +
+                '</div>'
+            );
+        });
+
+        console.log(postList);
+
     });
 
-}); // End DocReady
+    $('.add-post').click(function(){
+        if($(this).hasClass('form-open')){
+            $('.post-form').css('height','0px');
+            $(this).css('transform','rotate(0deg)').removeClass('form-open');
+        } else {
+            $('.post-form').css('height','100vh');
+            $(this).css('transform','rotate(45deg)').addClass('form-open');
+            $('#postTitle').focus();
+        }
+    });
+
+    $('#submit-post').click(function(){
+        var postTitle = $('#postTitle').val();
+        var fullName = $('#fullName').val();
+        var body = $('#body').val().replace(/(?:\r\n|\r|\n)/g, '<br />');;
+        var id = Math.floor((Math.random() * 102425245222) + 1);
+        var date = 20160124;
+
+
+        newPost.author = {};
+        newPost.post = {};
+        newPost.id = id;
+        newPost.date = date;
+        newPost.author.name = fullName;
+        newPost.post.title = postTitle;
+        newPost.post.body = body;
+        console.log(newPost);
+
+        addPost();
+
+    });
+
+    $('input,textarea').keyup(function(){
+        if($('#postTitle').val() && $('#fullName').val() && $('#body').val().length > 5){
+            $('#submit-post').css('opacity','1');
+        } else {
+            $('#submit-post').hide('opacity','0');
+        }
+    });
+
+
+});
