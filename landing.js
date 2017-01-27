@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     function updatePosts(){
         $.ajax({
-            url:"https://api.myjson.com/bins/16kzld",
+            url:"https://api.myjson.com/bins/10taqp",
             type:"PUT",
             data: JSON.stringify(postList),
             contentType:"application/json; charset=utf-8",
@@ -22,7 +22,7 @@ $(document).ready(function(){
      }
 
     function addPost(){
-        $.get("https://api.myjson.com/bins/16kzld", function(data, textStatus, jqXHR) {
+        $.get("https://api.myjson.com/bins/10taqp", function(data, textStatus, jqXHR) {
             postList = data;
             postList.posts.unshift(newPost);
             if(postList.posts.length > 200){
@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     // GET POSTS FROM MYJSON.com
 
-    $.get("https://api.myjson.com/bins/16kzld", function(data, textStatus, jqXHR) {
+    $.get("https://api.myjson.com/bins/10taqp", function(data, textStatus, jqXHR) {
         postList = data;
         console.log(postList);
         posts = data.posts;
