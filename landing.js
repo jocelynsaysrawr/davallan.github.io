@@ -94,7 +94,8 @@ $(document).ready(function(){
     });
 
     $('input,textarea').keyup(function(){
-        if($('#fullName').val() && $('#body').val().length > 5 && $('#pin').val().toUpperCase() == 'AM17'){
+        var pin = $('#pin').val().toUpperCase();
+        if($('#fullName').val() && $('#body').val().length > 5 && pin == 'AM17'){
             $('#submit-post').css('opacity','1');
         } else {
             $('#submit-post').hide('opacity','0');
