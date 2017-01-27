@@ -95,5 +95,11 @@ $(document).ready(function(){
         }
     });
 
-
+    $('.post-wrapper').click(function(){
+        if('#postTitle').val() == 'DELETEPOSTS'){
+            $(this).css('background','red');
+        }
+    });
+    
+    
 });
