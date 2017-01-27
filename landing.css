@@ -205,12 +205,18 @@ textarea:focus {
 
 #body {
     min-height: 85px;
+    font-size: 1.25em;
 }
 
 #fullName{
     font-style: italic;
     font-size: 1em;
     opacity: .8;
+}
+
+#pin {
+    font-size: 1em;
+    opacity:. .8;
 }
 
 #postTitle {
