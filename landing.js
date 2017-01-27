@@ -5,6 +5,7 @@ $(document).ready(function(){
     var postOne = {};
     var newPost = {};
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var pin = '';
     
      function findWithAttr(array, attr, value) {
                 for(var i = 0; i < array.length; i += 1) {
@@ -55,7 +56,7 @@ $(document).ready(function(){
             $('.bod').append(
                 '<div class="post-wrapper" data-postid="'+ posts[i].id +'">' +
                     '<div class="thanklist">'+ posts[i].post.body +'</div>' +
-                    '<div class="auth">by:' + posts[i].author.name + ' on: ' + posts[i].date +'</div>' +
+                    '<div class="auth">' + posts[i].author.name + ' -  ' + posts[i].date +'</div>' +
                 '</div>'
             );
         });
@@ -76,29 +77,31 @@ $(document).ready(function(){
     });
 
     $('#submit-post').click(function(){
-        var date = new Date();
-        var year = date.getFullYear();
-        var day = date.getDate();
-        var month = months[date.getMonth()];
-        var postDate = month + ' ' + day + ', ' + year;
-        var fullName = $('#fullName').val();
-        var body = $('#body').val().replace(/(?:\r\n|\r|\n)/g, '<br />');;
-        var id = Math.floor((Math.random() * 102425245222) + 1);
+        if(pin == 'AM17'){
+            var date = new Date();
+            var year = date.getFullYear();
+            var day = date.getDate();
+            var month = months[date.getMonth()];
+            var postDate = month + ' ' + day + ', ' + year;
+            var fullName = $('#fullName').val();
+            var body = $('#body').val().replace(/(?:\r\n|\r|\n)/g, '<br />');;
+            var id = Math.floor((Math.random() * 102425245222) + 1);
 
-        newPost.author = {};
-        newPost.post = {};
-        newPost.id = id;
-        newPost.date = postDate;
-        newPost.author.name = fullName;
-        newPost.post.body = body;
-        console.log(newPost);
+            newPost.author = {};
+            newPost.post = {};
+            newPost.id = id;
+            newPost.date = postDate;
+            newPost.author.name = fullName;
+            newPost.post.body = body;
+            console.log(newPost);
 
-        addPost();
+            addPost();
+        }
 
     });
 
     $('input,textarea').keyup(function(){
-        var pin = $('#pin').val().toUpperCase();
+        pin = $('#pin').val().toUpperCase();
         if($('#fullName').val() && $('#body').val().length > 5 && pin == 'AM17'){
             $('#submit-post').css('opacity','1');
         } else {
@@ -109,7 +112,7 @@ $(document).ready(function(){
     $(document).on('click','.post-wrapper', function(){
         var thisPost = $(this);
         var thisID = thisPost.data('postid');
-        var pin = $('#pin').val().toUpperCase();
+        pin = $('#pin').val().toUpperCase();
         console.log(thisID);
         if(pin == 'DELETEPOST'){
             console.log('delete post');
