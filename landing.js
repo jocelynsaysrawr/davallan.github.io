@@ -144,13 +144,12 @@ $(document).ready(function(){
     $('.today-toggle').click(function(){
         $(this).toggleClass('today-only');
         if($(this).hasClass('today-only')){
-                $('.past').hide();
-                $('.today').show();
-            } else {
-                $('.past').show();
-                $('.today').show();
-            }
-        });
+            $('.past').hide();
+            $('.today').show();
+        } else {
+            $('.past').show();
+            $('.today').show();
+        }
     });
     
 });
