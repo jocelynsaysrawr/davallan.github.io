@@ -106,7 +106,7 @@ $(document).ready(function(){
         var thisPost = $(this);
         var thisID = thisPost.data('postid');
         console.log(thisID);
-        if($('#postTitle').val() == 'DELETEPOSTS'){
+        if($('#pin').val() == 'DELETEPOST'){
             console.log('delete post');
             thisPost.css('background','#f44336');
             var postPos = findWithAttr(postList.posts, 'id', thisID);
