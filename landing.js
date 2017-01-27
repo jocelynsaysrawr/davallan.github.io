@@ -55,8 +55,10 @@ $(document).ready(function(){
         postOne = posts[0];
 
         $.each(posts, function(i){
-            var mo = posts[i].date.split(' ')[0];
-            var da = posts[i].date.split(' ')[1];
+            var pd = posts[i].date
+            var postda = pd.split(' ');
+            var mo = postda[0];
+            var da = postda[1];
             var today = false;
             if(mo == months[date.getMonth()] && da == day){today = true}
             console.log(today);
