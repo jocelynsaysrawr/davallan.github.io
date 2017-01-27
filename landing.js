@@ -55,13 +55,13 @@ $(document).ready(function(){
         postOne = posts[0];
 
         $.each(posts, function(i){
-            var pd = posts[i].date
-            var postda = pd.split(' ');
-            var mo = postda[0];
-            var da = postda[1];
-            var today = false;
-            if(mo == months[date.getMonth()] && da == day){today = true}
-            console.log(today);
+//             var pd = posts[i].date
+//             var postda = pd.split(' ');
+//             var mo = postda[0];
+//             var da = postda[1];
+//             var today = false;
+//             if(mo == months[date.getMonth()] && da == day){today = true}
+//             console.log(today);
             $('.bod').append(
                 '<div class="post-wrapper" data-postid="'+ posts[i].id +'">' +
                     '<div class="thanklist">'+ posts[i].post.body +'</div>' +
