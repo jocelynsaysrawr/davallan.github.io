@@ -71,6 +71,12 @@ textarea:focus {
     box-shadow: 10px 10px 75px -12px rgba(82,82,82,0.44);
 }
 
+@media screen and (max-width: 500px){
+    .post-wrapper {
+        width: 90%;
+    }
+}
+
 .post-wrapper h1 {
     font-size: 1em;
     margin: 0px;
@@ -175,6 +181,7 @@ textarea:focus {
     width: 100%;
     max-width: 600px;
     margin: auto;
+    padding: 24px;
 }
 
 .post-form input,
