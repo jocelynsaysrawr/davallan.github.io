@@ -34,9 +34,9 @@ $(document).ready(function(){
         $.get("https://api.myjson.com/bins/zvflt", function(data, textStatus, jqXHR) {
             postList = data;
             postList.posts.unshift(newPost);
-            if(postList.posts.length > 200){
-                postList.posts.length = 200;
-            }
+//             if(postList.posts.length > 200){
+//                 postList.posts.length = 200;
+//             }
             console.log(postList);
             updatePosts();
         });
