@@ -76,16 +76,19 @@ $(document).ready(function(){
     });
 
     $('#submit-post').click(function(){
+        var date = new Date();
+        var year = date.getFullYear();
+        var day = date.getDate();
+        var month = months[date.getMonth()];
+        var postDate = month + ' ' + ', ' + year;
         var fullName = $('#fullName').val();
         var body = $('#body').val().replace(/(?:\r\n|\r|\n)/g, '<br />');;
         var id = Math.floor((Math.random() * 102425245222) + 1);
-        var date = 20160124;
-
 
         newPost.author = {};
         newPost.post = {};
         newPost.id = id;
-        newPost.date = date;
+        newPost.date = postDate;
         newPost.author.name = fullName;
         newPost.post.body = body;
         console.log(newPost);
@@ -104,10 +107,6 @@ $(document).ready(function(){
     });
 
     $(document).on('click','.post-wrapper', function(){
-        var date = new Date();
-        var year = date.getFullYear();
-        var day = date.getDate();
-        var month = months[date.getMonth()];
         var thisPost = $(this);
         var thisID = thisPost.data('postid');
         var pin = $('#pin').val().toUpperCase();
