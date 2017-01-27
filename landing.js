@@ -18,6 +18,9 @@ $(document).ready(function(){
 
     function addPost(){
         postList.posts.unshift(newPost);
+        if(postList.length > 200){
+            postList.length = 200;
+        }
         console.log(postList);
         updatePosts();
     }
