@@ -105,8 +105,9 @@ $(document).ready(function(){
     $(document).on('click','.post-wrapper', function(){
         var thisPost = $(this);
         var thisID = thisPost.data('postid');
+        var pin = $('#pin').val().toUpperCase();
         console.log(thisID);
-        if($('#pin').val() == 'DELETEPOST'){
+        if(pin == 'DELETEPOST'){
             console.log('delete post');
             thisPost.css('background','#f44336');
             var postPos = findWithAttr(postList.posts, 'id', thisID);
