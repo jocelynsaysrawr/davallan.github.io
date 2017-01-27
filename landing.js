@@ -59,7 +59,7 @@ $(document).ready(function(){
             var postda = pd.split(' ');
             var mo = postda[0];
             var da = postda[1];
-            console.log(mo + '=' + months[date.getMonth()] + '   ' + da + '=' day);
+            console.log(mo + '=' + months[date.getMonth()] + '   ' + da + '=' + day);
             var today = 'false';
             if(mo == months[date.getMonth()] && da == day){today = 'true'}
             console.log(today);
