@@ -58,12 +58,14 @@ textarea:focus {
 }
 
 .post-wrapper {
+    position: relative;
     display: block;
     width: 25%;
     min-width: 250px;
     background: white;
     box-sizing: border-box;
     padding: 24px;
+    padding-bottom: 48px;
     border: solid 1px #f4f4f4;
 }
 
@@ -94,6 +96,9 @@ textarea:focus {
     font-size: .8em;
     font-style: italic;
     opacity: .7;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
 }
 
 .header .menu {
