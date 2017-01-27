@@ -4,6 +4,15 @@ $(document).ready(function(){
     var posts = [];
     var postOne = {};
     var newPost = {};
+    
+     function findWithAttr(array, attr, value) {
+                for(var i = 0; i < array.length; i += 1) {
+                    if(array[i][attr] === value) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
 
     function updatePosts(){
         $.ajax({
@@ -101,8 +110,9 @@ $(document).ready(function(){
         console.log(thisID);
         if($('#postTitle').val() == 'DELETEPOSTS'){
             console.log('delete post');
-            thisPost.css('background','red');
-        }
+            thisPost.css('background','#f44336');
+            var postPos = findWithAttr(postList.posts, 'id', thisID);
+            console.log(postPos);
     });
     
     
