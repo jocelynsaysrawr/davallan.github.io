@@ -5,29 +5,28 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="landing.js"></script>
         <script type="application/javascript" src="javascript/jquery.fullscreen.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Shrikhand|VT323" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Shrikhand|VT323|Material+Icons" rel="stylesheet">
 		<link href="icofont/css/icofont.css" rel="stylesheet" />
 
 	</head>
     <body>
-        <div class="hero-wrapper">
-            <div class='hero'>
-                <span class='timer'>3</span>
-            </div>
-        </div>
-        <div class='section one'>
-        <h1>Get Their Attention!</h1>
-            <p>
-                You have to get the attention of your visitors. And you
-                only have about 3 seconds to do that.
+		<div class='header'>
+			<img class='logo' src='images/signature_white.png' />
+		</div>
+		<div class='bod'>
 
-                Your goal should be to have your visitors make a decision
-                within the first 3 seconds of visiting your site. This can
-                mean that you give them a physical choice to make, or you have them
-                make a subconscious choice to stay on your page.
+		</div>
 
-                The latter is the eaisier of the two.
-            </p>
-        </div>
+		<i class="add-post material-icons">add</i>
+
+		<div class='post-form'>
+			<div class='form-wrap'>
+				<input type='text' required id='postTitle' placeholder="Post Title"/>
+				<input type='text' required id='fullName' placeholder="Full Name"/>
+				<textarea required id='body' placeholder="I'm thankful for..."></textarea>
+				<span id='submit-post'>Submit Post</span>
+			</div>
+		</div>
+
     </body>
 </html>
