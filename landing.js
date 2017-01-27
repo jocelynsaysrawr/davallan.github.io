@@ -1,19 +1,23 @@
 $(document).ready(function(){
 
     function updatePosts(){
-        $.ajax({
-            url:"https://api.myjson.com/bins/16kzld",
-            type:"PUT",
-            data: JSON.stringify(postList),
-            contentType:"application/json; charset=utf-8",
-            dataType:"json",
-            success: function(data, textStatus, jqXHR){
-                console.log(textStatus);
-                $('.add-post').removeClass('form-open');
-                $('.post-form').fadeOut();
-                location.reload();
-            }
-        });
+        
+         $.get("https://api.myjson.com/bins/16kzld", function(data, textStatus, jqXHR) {
+            postList = data;
+            $.ajax({
+                url:"https://api.myjson.com/bins/16kzld",
+                type:"PUT",
+                data: JSON.stringify(postList),
+                contentType:"application/json; charset=utf-8",
+                dataType:"json",
+                success: function(data, textStatus, jqXHR){
+                    console.log(textStatus);
+                    $('.add-post').removeClass('form-open');
+                    $('.post-form').fadeOut();
+                    location.reload();
+                }
+            });
+         });
     }
 
     function addPost(){
