@@ -113,6 +113,8 @@ $(document).ready(function(){
             thisPost.css('background','#f44336');
             var postPos = findWithAttr(postList.posts, 'id', thisID);
             console.log(postPos);
+            postList.splice(postPos,1);
+            updatePosts();
         }
     });
   
