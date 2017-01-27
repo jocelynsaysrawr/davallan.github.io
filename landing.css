@@ -147,6 +147,10 @@ textarea:focus {
    -moz-transition: ease .25s;
    -ms-transition: ease .25s;
    -o-transition: ease .25s;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .post-form {
