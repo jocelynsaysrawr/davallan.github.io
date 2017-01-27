@@ -216,7 +216,8 @@ textarea:focus {
 
 #pin {
     font-size: 1em;
-    opacity:. .8;
+    opacity .8;
+    text-transform: uppercase;
 }
 
 #postTitle {
