@@ -59,17 +59,19 @@ $(document).ready(function(){
             );
         });
         
-        $.ajax({
-            url:"https://api.myjson.com/bins/a2j0p",
-            type:"PUT",
-            data: JSON.stringify(postList),
-            contentType:"application/json; charset=utf-8",
-            dataType:"json",
-            success: function(data, textStatus, jqXHR){
-                console.log(textStatus);
-                console.log('backed up to a2j0p');
-            }
-        });
+        if(postList.posts.length > 0){
+            $.ajax({
+                url:"https://api.myjson.com/bins/a2j0p",
+                type:"PUT",
+                data: JSON.stringify(postList),
+                contentType:"application/json; charset=utf-8",
+                dataType:"json",
+                success: function(data, textStatus, jqXHR){
+                    console.log(textStatus);
+                    console.log('backed up to a2j0p');
+                }
+            });
+        }
         
     });
 
