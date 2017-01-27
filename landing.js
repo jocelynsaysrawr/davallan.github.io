@@ -43,7 +43,7 @@ $(document).ready(function(){
 
         $.each(posts, function(i){
             $('.bod').append(
-                '<div class="post-wrapper">' +
+                '<div class="post-wrapper" data-postid="+ posts[i].id +">' +
                     '<h1>' + posts[i].post.title + '</h1>' +
                     '<div class="auth">' + posts[i].author.name + '</div>' +
                     '<div class="thanklist">'+ posts[i].post.body +'</div>' +
@@ -97,6 +97,8 @@ $(document).ready(function(){
 
     $(document).on('click','.post-wrapper', function(){
         var thisPost = $(this);
+        var thisID = thisPost.data('postid');
+        console.log(thisID);
         if($('#postTitle').val() == 'DELETEPOSTS'){
             console.log('delete post');
             thisPost.css('background','red');
