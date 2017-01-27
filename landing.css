@@ -60,15 +60,11 @@ textarea:focus {
 .post-wrapper {
     display: block;
     width: 23%;
-    margin: 3px;
     min-width: 250px;
     background: white;
-    border-radius: 2px;
     box-sizing: border-box;
     padding: 24px;
-    -webkit-box-shadow: 10px 10px 75px -12px rgba(82,82,82,0.44);
-    -moz-box-shadow: 10px 10px 75px -12px rgba(82,82,82,0.44);
-    box-shadow: 10px 10px 75px -12px rgba(82,82,82,0.44);
+    border: solid 1px #f4f4f4;
 }
 
 @media screen and (max-width: 500px){
