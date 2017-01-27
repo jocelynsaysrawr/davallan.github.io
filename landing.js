@@ -19,7 +19,7 @@ $(document).ready(function(){
                 location.reload();
             }
         });
-     });
+     }
 
     function addPost(){
         $.get("https://api.myjson.com/bins/16kzld", function(data, textStatus, jqXHR) {
