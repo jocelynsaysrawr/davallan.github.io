@@ -39,7 +39,6 @@ $(document).ready(function(){
 //             if(postList.posts.length > 200){
 //                 postList.posts.length = 200;
 //             }
-            console.log(postList);
             updatePosts();
         });
     }
@@ -48,7 +47,6 @@ $(document).ready(function(){
 
     $.get("https://api.myjson.com/bins/zvflt", function(data, textStatus, jqXHR) {
         postList = data;
-        console.log(postList);
         posts = data.posts;
         postOne = posts[0];
 
@@ -60,9 +58,19 @@ $(document).ready(function(){
                 '</div>'
             );
         });
-
-        console.log(postList);
-
+        
+        $.ajax({
+            url:"https://api.myjson.com/bins/a2j0p",
+            type:"PUT",
+            data: JSON.stringify(postList),
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+            success: function(data, textStatus, jqXHR){
+                console.log(textStatus);
+                console.log('backed up to a2j0p');
+            }
+        });
+        
     });
 
     $('.add-post').click(function(){
@@ -93,7 +101,6 @@ $(document).ready(function(){
             newPost.date = postDate;
             newPost.author.name = fullName;
             newPost.post.body = body;
-            console.log(newPost);
 
             addPost();
         }
