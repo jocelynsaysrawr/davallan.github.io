@@ -16,7 +16,7 @@ $(document).ready(function(){
 
     function updatePosts(){
         $.ajax({
-            url:"https://api.myjson.com/bins/10taqp",
+            url:"https://api.myjson.com/bins/zvflt",
             type:"PUT",
             data: JSON.stringify(postList),
             contentType:"application/json; charset=utf-8",
@@ -31,7 +31,7 @@ $(document).ready(function(){
      }
 
     function addPost(){
-        $.get("https://api.myjson.com/bins/10taqp", function(data, textStatus, jqXHR) {
+        $.get("https://api.myjson.com/bins/zvflt", function(data, textStatus, jqXHR) {
             postList = data;
             postList.posts.unshift(newPost);
             if(postList.posts.length > 200){
@@ -44,7 +44,7 @@ $(document).ready(function(){
 
     // GET POSTS FROM MYJSON.com
 
-    $.get("https://api.myjson.com/bins/10taqp", function(data, textStatus, jqXHR) {
+    $.get("https://api.myjson.com/bins/zvflt", function(data, textStatus, jqXHR) {
         postList = data;
         console.log(postList);
         posts = data.posts;
@@ -54,7 +54,6 @@ $(document).ready(function(){
             $('.bod').append(
                 '<div class="post-wrapper" data-postid="'+ posts[i].id +'">' +
                     '<div class="thanklist">'+ posts[i].post.body +'</div>' +
-                    '<h1>' + posts[i].post.title + '</h1>' +
                     '<div class="auth">' + posts[i].author.name + '</div>' +
                 '</div>'
             );
@@ -71,12 +70,11 @@ $(document).ready(function(){
         } else {
             $('.post-form').css('height','100vh');
             $(this).css('transform','rotate(45deg)').addClass('form-open');
-            $('#postTitle').focus();
+            $('#body').focus();
         }
     });
 
     $('#submit-post').click(function(){
-        var postTitle = $('#postTitle').val();
         var fullName = $('#fullName').val();
         var body = $('#body').val().replace(/(?:\r\n|\r|\n)/g, '<br />');;
         var id = Math.floor((Math.random() * 102425245222) + 1);
@@ -88,7 +86,6 @@ $(document).ready(function(){
         newPost.id = id;
         newPost.date = date;
         newPost.author.name = fullName;
-        newPost.post.title = postTitle;
         newPost.post.body = body;
         console.log(newPost);
 
