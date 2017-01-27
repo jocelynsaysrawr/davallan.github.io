@@ -48,7 +48,7 @@ textarea:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     width: 90%;
     margin: auto;
     margin-top: -15vh;
@@ -59,7 +59,7 @@ textarea:focus {
 
 .post-wrapper {
     display: block;
-    width: 23%;
+    width: 25%;
     min-width: 250px;
     background: white;
     box-sizing: border-box;
