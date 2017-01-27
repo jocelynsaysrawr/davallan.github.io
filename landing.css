@@ -248,9 +248,9 @@ textarea:focus {
 
 .today-toggle {
     position: fixed;
-    right: 30px;
+    right: 28px;
     bottom: 83px;
-    padding: 9px;
+    padding: 8px;
     border-radius: 50%;
     background: #4794df;
     color: white;
