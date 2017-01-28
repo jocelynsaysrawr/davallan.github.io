@@ -10,7 +10,7 @@ $(document).ready(function(){
     var postOne = {};
     var newPost = {};
     var pin = '';
-    
+
      function findWithAttr(array, attr, value) {
                 for(var i = 0; i < array.length; i += 1) {
                     if(array[i][attr] === value) {
@@ -48,21 +48,24 @@ $(document).ready(function(){
     }
 
     // GET POSTS FROM MYJSON.com
+    // hog4p -- ID with 901 records -- replace zvflt to test.
 
     $.get("https://api.myjson.com/bins/zvflt", function(data, textStatus, jqXHR) {
         postList = data;
         posts = data.posts;
         postOne = posts[0];
 
+        $('.loading-icon').fadeOut('fast');
+
         $.each(posts, function(i){
             var pd = posts[i].date
             var postda = pd.split(' ');
             var mo = postda[0];
             var da = postda[1];
-            console.log(mo + '=' + months[date.getMonth()] + '   ' + da + '=' + day);
+            // console.log(mo + '=' + months[date.getMonth()] + '   ' + da + '=' + day);
             var today = 'past';
             if(mo == months[date.getMonth()] && da == day){today = 'today'}
-            console.log(today);
+            // console.log(today);
             $('.bod').append(
                 '<div class="post-wrapper '+ today +'" data-postid="'+ posts[i].id +'">' +
                     '<div class="thanklist">'+ posts[i].post.body +'</div>' +
@@ -70,10 +73,10 @@ $(document).ready(function(){
                 '</div>'
             );
         });
-        
+
         if(postList.posts.length > 0){
             $.ajax({
-                url:"https://api.myjson.com/bins/a2j0p",
+                url:"https://api.myjson.com/bins/a2j0p", // BACKUP JSON
                 type:"PUT",
                 data: JSON.stringify(postList),
                 contentType:"application/json; charset=utf-8",
@@ -84,7 +87,7 @@ $(document).ready(function(){
                 }
             });
         }
-        
+
     });
 
     $('.add-post').click(function(){
@@ -100,7 +103,10 @@ $(document).ready(function(){
 
     $('#submit-post').click(function(){
         if(pin == 'AM17'){
-          
+
+            $('.form-wrap').hide();
+            $('.post-form').append('<i class="loading-icon material-icons">&#xE41A;</i>').css('background-color','transparent');
+
             var fullName = $('#fullName').val();
             var body = $('#body').val().replace(/(?:\r\n|\r|\n)/g, '<br />');;
             var id = Math.floor((Math.random() * 102425245222) + 1);
@@ -140,7 +146,7 @@ $(document).ready(function(){
             updatePosts();
         }
     });
-  
+
     $('.today-toggle').click(function(){
         $(this).toggleClass('today-only');
         if($(this).hasClass('today-only')){
@@ -151,5 +157,5 @@ $(document).ready(function(){
             $('.today').show();
         }
     });
-    
+
 });
