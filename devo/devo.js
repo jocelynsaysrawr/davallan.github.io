@@ -4,18 +4,43 @@ $(document).ready(function(){
     var devolist = {};
     var devokeys = [];
 
-      // Initialize Firebase
-    //   var config = {
-    //     apiKey: "AIzaSyBQf4uTTOTZg7dGE6K2bykN-s5SkROJknw",
-    //     authDomain: "devo-432e2.firebaseapp.com",
-    //     databaseURL: "https://devo-432e2.firebaseio.com",
-    //     storageBucket: "devo-432e2.appspot.com",
-    //     messagingSenderId: "199108588081"
-    //   };
-    //   firebase.initializeApp(config);
+    //   Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBQf4uTTOTZg7dGE6K2bykN-s5SkROJknw",
+        authDomain: "devo-432e2.firebaseapp.com",
+        databaseURL: "https://devo-432e2.firebaseio.com",
+        storageBucket: "devo-432e2.appspot.com",
+        messagingSenderId: "199108588081"
+    };
+
+    firebase.initializeApp(config);
+
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    // Initialize Signin
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        console.log(token);
+        // The signed-in user info.
+        var user = result.user;
+        console.log(user);
+        // ...
+    }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+    });
 
 
     var database = firebase.database();
+
+    var devos = firebase.database().ref('devos');
 
     function newDevo(devoId, title, body, author, date) {
       firebase.database().ref('devos/' + devoId).set({
@@ -37,17 +62,12 @@ $(document).ready(function(){
         );
     }
 
-    // Below sets a listener on the user list and returns it if changed
-
-    var devos = firebase.database().ref('devos');
     devos.on('value', function(snapshot) {
         console.log(snapshot.val());
         devolist = snapshot.val();
         devokeys = Object.keys(devolist);
         navdevo(devolist, devokeys[currentdevo]);
     });
-
-    // Below writes to user list on click... runs the snapshot above on change
 
     $( "#submit-form" ).click(function(e) {
         console.log('post submit triggered');
