@@ -5,6 +5,7 @@ $(document).ready(function(){
     var devokeys = [];
 
     //   Initialize Firebase
+
     var config = {
         apiKey: "AIzaSyBQf4uTTOTZg7dGE6K2bykN-s5SkROJknw",
         authDomain: "devo-432e2.firebaseapp.com",
@@ -18,6 +19,7 @@ $(document).ready(function(){
     var provider = new firebase.auth.GoogleAuthProvider();
 
     // Initialize Signin
+
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
@@ -39,7 +41,6 @@ $(document).ready(function(){
 
 
     var database = firebase.database();
-
     var devos = firebase.database().ref('devos');
 
     function newDevo(devoId, title, body, author, date) {
