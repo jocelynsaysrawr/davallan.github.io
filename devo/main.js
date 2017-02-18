@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     // Initialize Signin
 
-    function triggerSignin() {
+    function triggerGoogleSignin() {
 
         var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -44,7 +44,7 @@ $(document).ready(function(){
     }
 
     $('.google-login').click(function(){
-        triggerSignin();
+        triggerGoogleSignin();
     });
 
     var database = firebase.database();
