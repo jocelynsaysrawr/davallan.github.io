@@ -16,7 +16,6 @@ $(document).ready(function(){
 
     firebase.initializeApp(config);
 
-
     // Initialize Signin
 
     function triggerGoogleSignin() {
@@ -45,6 +44,17 @@ $(document).ready(function(){
 
     $('.google-login').click(function(){
         triggerGoogleSignin();
+    });
+
+
+// Login Check
+
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+        $('body').append('<div>User logged in</div>');
+        } else {
+        $('body').append('<div>User NOT logged in</div>');
+        }
     });
 
     var database = firebase.database();
