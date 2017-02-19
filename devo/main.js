@@ -51,7 +51,7 @@ $(document).ready(function(){
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            $('body').append('<div>User logged in</div>');
+            $('body').append('<div>User logged in as '+ user.displayName +'</div>');
             console.log(user);
         } else {
             $('body').append('<div>User NOT logged in</div>');
