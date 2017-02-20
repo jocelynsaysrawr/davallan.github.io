@@ -94,8 +94,7 @@ $(document).ready(function(){
 
     function appendPosts(elementClass){
 
-        var devolist = {};
-
+        var devolist = [1,2,3,4];
         devos.on('value', function(snapshot) {
           devolist = snapshot.val();
         });
