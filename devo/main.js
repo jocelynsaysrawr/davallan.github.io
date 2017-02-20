@@ -25,10 +25,10 @@ $(document).ready(function(){
         firebase.auth().signInWithPopup(provider).then(function(result) {
             // This gives you a Google Access Token. You can use it to access the Google API.
             var token = result.credential.accessToken;
-            console.log(token);
+            // console.log(token);
             // The signed-in user info.
             var user = result.user;
-            console.log(user);
+            // console.log(user);
             // ...
         }).catch(function(error) {
             // Handle Errors here.
@@ -79,6 +79,8 @@ $(document).ready(function(){
     var database = firebase.database();
     var devos = firebase.database().ref('devos');
 
+    console.log(devos);
+
     function newDevo(devoId, title, body, author, date) {
       firebase.database().ref('devos/' + devoId).set({
         title: title,
@@ -89,8 +91,9 @@ $(document).ready(function(){
     }
 
     function appendPosts(elementClass){
+        console.log('append Posts called');
         $.each(devos, function(){
-            $('.'+ elementClass).append('heres one');
+            $('.'+ elementClass).append('<div>heres one</div>');
         });
     }
 
