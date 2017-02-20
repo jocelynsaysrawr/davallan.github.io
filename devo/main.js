@@ -80,7 +80,6 @@ $(document).ready(function(){
     var devos = database.ref('devos');
 
     devos.on('value', function(snapshot) {
-      updateStarCount(postElement, snapshot.val());
       console.log(snapshot.val());
     });
 
