@@ -68,6 +68,7 @@ $(document).ready(function(){
             $('.welcome').show();
             $('.google-login').hide();
             $('.sign-out').show();
+            appendPosts('posts-wrapper');
             console.log(user);
         } else {
             $('.google-login').show();
@@ -87,23 +88,12 @@ $(document).ready(function(){
       });
     }
 
-    function navdevo(list, x){
-        $('.post-cont').html(
-            '<div class="post-wrapper">' +
-                '<h2 class="post-title">' + list[x].title + '</h2>' +
-                '<p class="post-body">' + list[x].body + '</p>' +
-                '<span class="post-author">' + list[x].author + '</span>' +
-                '<span class="post-date">' + list[x].date + '</span>' +
-            '</div>'
-        );
+    function appendPosts(elementClass){
+        $.each(devos, function(){
+            $('.'+ elementClass).append('heres one');
+        });
     }
 
-    devos.on('value', function(snapshot) {
-        console.log(snapshot.val());
-        devolist = snapshot.val();
-        devokeys = Object.keys(devolist);
-        navdevo(devolist, devokeys[currentdevo]);
-    });
 
     $( "#submit-form" ).click(function(e) {
         console.log('post submit triggered');
@@ -116,18 +106,5 @@ $(document).ready(function(){
             20160211
         );
     });
-
-    $('.next').click(function(){
-        if(currentdevo < devokeys.length - 1){
-            navdevo(devolist,devokeys[currentdevo+=1]);
-        }
-    });
-
-    $('.back').click(function(){
-        if(currentdevo > 0){
-            navdevo(devolist,devokeys[currentdevo-=1]);
-        }
-    });
-
 
 });
