@@ -71,6 +71,11 @@ $(document).ready(function(){
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             database = firebase.database();
+            var devos = database.ref('devos');
+            devos.on('value', function(snapshot) {
+              devolist = snapshot.val();
+            });
+
             $('.welcome img').attr('src', user.photoURL);
             $('.welcome .message').html('Welcome, ' + user.displayName);
             $('.welcome').show();
@@ -95,11 +100,6 @@ $(document).ready(function(){
     }
 
     function appendPosts(elementClass){
-
-        var devos = database.ref('devos');
-        devos.on('value', function(snapshot) {
-          devolist = snapshot.val();
-        });
 
         console.log('append Posts called');
         console.log(devolist);
