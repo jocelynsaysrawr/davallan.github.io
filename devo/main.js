@@ -17,16 +17,14 @@ $(document).ready(function(){
 
     firebase.initializeApp(config);
 
-    var database = firebase.database();
-    var devos = database.ref('devos');
-    devos.on('value', function(snapshot) {
-      devolist = snapshot.val();
-      console.log(snapshot.val());
-      firebase.auth().onAuthStateChanged(function(user) {
-          if (user) {
-              appendPosts('posts-wrapper');
-          }
-      });
+    firebase.auth().onAuthStateChanged(function(user) {
+        var database = firebase.database();
+        var devos = database.ref('devos');
+        devos.on('value', function(snapshot) {
+          devolist = snapshot.val();
+          console.log(snapshot.val());
+          appendPosts('posts-wrapper');
+        });
     });
 
 
