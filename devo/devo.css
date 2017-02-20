@@ -5,53 +5,25 @@ body {
     overflow: hidden;
 }
 
-.post-cont {
+.login-modal {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.post-wrapper {
-    box-sizing: border-box;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    vertical-align: top;
-    padding: 24px;
-    padding-bottom: 100px;
-    color: white;
-    overflow: hidden;
-}
-
-.post-wrapper:nth-child(even){
-    background: orangered;
-}
-
-.post-wrapper:nth-child(odd){
+    min-height: 100vh;
     background: royalblue;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.next, .back {
-    position: fixed;
-    bottom: 10px;
-    padding: 12px;
+.welcome img {
+    max-width: 100px;
+    border-radius: 50%;
+    border: solid 3px white;
+}
+
+.welcome .message {
     color: white;
-    background: rgba(0,0,0,0.1);
 }
-
-.next {
-    right: 10px;
-}
-
-.back {
-    left: 10px;
-}
-
 
 .google-login {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -60,5 +32,4 @@ body {
     padding: 12px 24px;
     background: #f4f4f4;
     border-radius: 2px;
-    
 }
