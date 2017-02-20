@@ -75,3 +75,14 @@ body {
     text-transform: uppercase;
     font-size: .8em;
 }
+
+.devo-wrapper {
+    display: block;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 100%;
+    background: white;
+    margin-top: 12px;
+    overflow: hidden;
+    color: gray;
+}
