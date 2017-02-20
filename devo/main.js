@@ -108,7 +108,13 @@ $(document).ready(function(){
         $('.' + elementClass).html();
         $.each(devolist, function(){
             console.log('hello');
-            $('.'+ elementClass).append('<div>heres one</div>');
+            $('.'+ elementClass).append(
+                '<div class="devo-wrapper">' +
+                    '<div class="devo-title">' + devolist[i].title + '</div>' +
+                    '<div class="devo-body">' + devolist[i].body + '</div>' +
+                    '<span class="devo-author">' + devolist[i].author + '</span>' +
+                '</div>'
+            );
         });
     }
 
