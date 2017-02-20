@@ -31,7 +31,7 @@ body {
 
 .welcome .message {
     color: white;
-    margin-top: 12px;
+    margin: 12px;
 }
 
 .google-login {
