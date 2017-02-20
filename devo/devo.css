@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 24px;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    transition: all 1s cubic-bezier(.25,.8,.25,1);
 }
 
 .welcome {
