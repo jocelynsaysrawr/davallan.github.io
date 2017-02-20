@@ -65,6 +65,7 @@ $(document).ready(function(){
         if (user) {
             $('.welcome img').attr('src', user.photoURL);
             $('.welcome .message').html('Welcome, ' + user.displayName);
+            $('.welcome').show();
             $('.google-login').hide();
             $('.sign-out').show();
             console.log(user);

@@ -53,4 +53,6 @@ body {
     padding: 6px;
     cursor: pointer;
     border: solid 1px white;
+    color: white;
+    border-radius: 20px;
 }
