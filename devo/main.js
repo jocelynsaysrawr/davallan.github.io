@@ -51,10 +51,8 @@ $(document).ready(function(){
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            $('body').append(
-                '<div>User logged in as '+ user.displayName +'</div>' +
-                '<img src="'+user.photoURL+'"/>'
-            );
+            $('.welcome img').attr('src', user.photoURL);
+            $('.welcome .message').html('Welcome, ' + user.displayName);
             console.log(user);
         } else {
             $('body').append('<div>User NOT logged in</div>');
