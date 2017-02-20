@@ -97,7 +97,6 @@ $(document).ready(function(){
 
     function appendPosts(elementClass){
         console.log('append Posts called');
-        var posts =
         $.each(devolist, function(){
             $('.'+ elementClass).append('<div>heres one</div>');
         });
