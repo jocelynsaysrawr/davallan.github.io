@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var currentdevo = 0;
-    var devolist = {};
+    var devolist;
     var devokeys = [];
 
     //   Initialize Firebase
@@ -15,8 +15,7 @@ $(document).ready(function(){
     };
 
     firebase.initializeApp(config);
-    var database = firebase.database();
-    var devos = database.ref('devos');
+
 
     // Initialize Signin
 
@@ -69,6 +68,8 @@ $(document).ready(function(){
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
+            var database = firebase.database();
+            var devos = database.ref('devos');
             $('.welcome img').attr('src', user.photoURL);
             $('.welcome .message').html('Welcome, ' + user.displayName);
             $('.welcome').show();
