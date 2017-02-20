@@ -15,6 +15,8 @@ $(document).ready(function(){
     };
 
     firebase.initializeApp(config);
+    var database = firebase.database();
+    var devos = database.ref('devos');
 
     // Initialize Signin
 
@@ -92,8 +94,6 @@ $(document).ready(function(){
 
     function appendPosts(elementClass){
 
-        var database = firebase.database();
-        var devos = database.ref('devos');
         var devolist = {};
 
         devos.on('value', function(snapshot) {
