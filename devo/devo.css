@@ -97,3 +97,19 @@ body {
     color: gray;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+
+.devo-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.devo-body {
+    line-height: 1.5em;
+}
+
+.devo-author {
+    font-weight: 100;
+    font-style: italic;
+    font-size: .8em;
+}

@@ -134,4 +134,7 @@ $(document).ready(function(){
         );
     });
 
+    //TODO: Each Post should have reference to comments and 'likes'
+
+
 });
