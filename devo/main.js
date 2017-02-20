@@ -82,10 +82,12 @@ $(document).ready(function(){
             $('.welcome').show();
             $('.login-actions').hide();
             $('.sign-out').show();
+            $('.login-modal').css('min-height','none');
             console.log(user);
         } else {
             $('.login-actions').show();
             $('.welcome').hide();
+            $('.login-modal').css('min-height','100vh');
         }
     });
 
