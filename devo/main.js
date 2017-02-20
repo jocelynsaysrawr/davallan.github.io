@@ -72,12 +72,12 @@ $(document).ready(function(){
             $('.welcome img').attr('src', user.photoURL);
             $('.welcome .message').html('Welcome, ' + user.displayName);
             $('.welcome').show();
-            $('.google-login').hide();
+            $('.login-actions').hide();
             $('.sign-out').show();
             appendPosts('posts-wrapper');
             console.log(user);
         } else {
-            $('.google-login').show();
+            $('.login-actions').show();
             $('.welcome').hide();
         }
     });
@@ -94,7 +94,6 @@ $(document).ready(function(){
 
     function appendPosts(elementClass){
 
-        var devolist = [1,2,3,4];
         devos.on('value', function(snapshot) {
           devolist = snapshot.val();
         });
