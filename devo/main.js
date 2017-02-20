@@ -21,6 +21,7 @@ $(document).ready(function(){
     devos.on('value', function(snapshot) {
       devolist = snapshot.val();
       console.log(snapshot.val());
+      appendPosts('posts-wrapper');
     });
 
 
@@ -81,7 +82,6 @@ $(document).ready(function(){
             $('.welcome').show();
             $('.login-actions').hide();
             $('.sign-out').show();
-            appendPosts('posts-wrapper');
             console.log(user);
         } else {
             $('.login-actions').show();
@@ -103,6 +103,7 @@ $(document).ready(function(){
 
         console.log('append Posts called');
         console.log(devolist);
+        $('.' + elementClass).html();
         $.each(devolist, function(){
             console.log('hello');
             $('.'+ elementClass).append('<div>heres one</div>');
