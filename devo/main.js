@@ -106,7 +106,7 @@ $(document).ready(function(){
         console.log('append Posts called');
         console.log(devolist);
         $('.' + elementClass).html();
-        $.each(devolist, function(){
+        $.each(devolist, function(i){
             console.log('hello');
             $('.'+ elementClass).append(
                 '<div class="devo-wrapper">' +
