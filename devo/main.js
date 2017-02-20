@@ -102,7 +102,7 @@ $(document).ready(function(){
         console.log('append Posts called');
         console.log(devolist);
         $.each(devolist, function(){
-            console.log(hello);
+            console.log('hello');
             $('.'+ elementClass).append('<div>heres one</div>');
         });
     }
