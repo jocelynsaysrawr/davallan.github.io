@@ -76,15 +76,6 @@ $(document).ready(function(){
         }
     });
 
-    var database = firebase.database();
-    var devos = database.ref('devos');
-    var devolist = {};
-
-    devos.on('value', function(snapshot) {
-      devolist = snapshot.val();
-    });
-
-    console.log(devolist);
 
     function newDevo(devoId, title, body, author, date) {
       database.ref('devos/' + devoId).set({
@@ -96,6 +87,15 @@ $(document).ready(function(){
     }
 
     function appendPosts(elementClass){
+
+        var database = firebase.database();
+        var devos = database.ref('devos');
+        var devolist = {};
+
+        devos.on('value', function(snapshot) {
+          devolist = snapshot.val();
+        });
+
         console.log('append Posts called');
         $.each(devolist, function(){
             $('.'+ elementClass).append('<div>heres one</div>');
