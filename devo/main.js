@@ -20,6 +20,7 @@ $(document).ready(function(){
     var devos = database.ref('devos');
     devos.on('value', function(snapshot) {
       devolist = snapshot.val();
+      console.log(snapshot.val());
     });
 
 
