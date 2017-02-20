@@ -3,6 +3,7 @@ $(document).ready(function(){
     var currentdevo = 0;
     var devolist;
     var devokeys = [];
+    var user = false;
 
     //   Initialize Firebase
 
@@ -21,7 +22,9 @@ $(document).ready(function(){
     devos.on('value', function(snapshot) {
       devolist = snapshot.val();
       console.log(snapshot.val());
-      appendPosts('posts-wrapper');
+      if(user){
+          appendPosts('posts-wrapper');
+      }
     });
 
 
