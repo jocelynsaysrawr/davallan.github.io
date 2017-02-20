@@ -22,8 +22,10 @@ $(document).ready(function(){
     devos.on('value', function(snapshot) {
       devolist = snapshot.val();
       console.log(snapshot.val());
-      if(user){
-          appendPosts('posts-wrapper');
+      firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+              appendPosts('posts-wrapper');
+          }
       }
     });
 
