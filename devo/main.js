@@ -77,12 +77,17 @@ $(document).ready(function(){
     });
 
     var database = firebase.database();
-    var devos = firebase.database().ref('devos');
+    var devos = database.ref('devos');
+
+    devos.on('value', function(snapshot) {
+      updateStarCount(postElement, snapshot.val());
+      console.log(snapshot.val());
+    });
 
     console.log(devos);
 
     function newDevo(devoId, title, body, author, date) {
-      firebase.database().ref('devos/' + devoId).set({
+      database.ref('devos/' + devoId).set({
         title: title,
         body: body,
         author: author,
@@ -92,6 +97,7 @@ $(document).ready(function(){
 
     function appendPosts(elementClass){
         console.log('append Posts called');
+        var posts =
         $.each(devos, function(){
             $('.'+ elementClass).append('<div>heres one</div>');
         });
