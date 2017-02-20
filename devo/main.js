@@ -26,7 +26,7 @@ $(document).ready(function(){
           if (user) {
               appendPosts('posts-wrapper');
           }
-      }
+      });
     });
 
 
