@@ -82,7 +82,7 @@ $(document).ready(function(){
             $('.welcome').show();
             $('.login-actions').hide();
             $('.sign-out').show();
-            $('.login-modal').css('min-height','none');
+            $('.login-modal').css('min-height','0px');
             console.log(user);
         } else {
             $('.login-actions').show();
