@@ -18,9 +18,7 @@ $(document).ready(function(){
 
     // Initialize Signin
 
-    function triggerGoogleSignin() {
-
-        var provider = new firebase.auth.GoogleAuthProvider();
+    function triggerSignin(provider) {
 
         firebase.auth().signInWithPopup(provider).then(function(result) {
             // This gives you a Google Access Token. You can use it to access the Google API.
@@ -51,7 +49,13 @@ $(document).ready(function(){
     }
 
     $('.google-login').click(function(){
-        triggerGoogleSignin();
+        var googleSignIn = new firebase.auth.GoogleAuthProvider();
+        triggerSignin(googleSignIn);
+    });
+
+    $('.facebook-login').click(function(){
+        var facebookSignIn = new firebase.auth.FacebookAuthProvider();
+        triggerSignin(facebookSignIn);
     });
 
     $('.sign-out').click(function(){
@@ -99,10 +103,10 @@ $(document).ready(function(){
         console.log('append Posts called');
         console.log(devolist);
         $.each(devolist, function(){
+            console.log(hello);
             $('.'+ elementClass).append('<div>heres one</div>');
         });
     }
-
 
     $( "#submit-form" ).click(function(e) {
         console.log('post submit triggered');
