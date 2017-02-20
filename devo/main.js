@@ -3,6 +3,7 @@ $(document).ready(function(){
     var currentdevo = 0;
     var devolist;
     var devokeys = [];
+    var database;
 
     //   Initialize Firebase
 
@@ -15,6 +16,7 @@ $(document).ready(function(){
     };
 
     firebase.initializeApp(config);
+
 
 
     // Initialize Signin
@@ -68,8 +70,7 @@ $(document).ready(function(){
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            var database = firebase.database();
-            var devos = database.ref('devos');
+            database = firebase.database();
             $('.welcome img').attr('src', user.photoURL);
             $('.welcome .message').html('Welcome, ' + user.displayName);
             $('.welcome').show();
@@ -95,6 +96,7 @@ $(document).ready(function(){
 
     function appendPosts(elementClass){
 
+        var devos = database.ref('devos');
         devos.on('value', function(snapshot) {
           devolist = snapshot.val();
         });
