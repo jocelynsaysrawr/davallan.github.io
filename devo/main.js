@@ -53,11 +53,11 @@ $(document).ready(function(){
         if (user) {
             $('.welcome img').attr('src', user.photoURL);
             $('.welcome .message').html('Welcome, ' + user.displayName);
-            $('.google-login').hide();
+            $('.google-login').html('Switch User');
             console.log(user);
         } else {
             $('.google-login').show();
-            $('.welcome').hide();
+            $('.welcome').html('Login with Google');
         }
     });
 

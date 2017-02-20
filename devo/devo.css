@@ -3,6 +3,7 @@ body {
     display: block;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .login-modal {
@@ -30,6 +31,7 @@ body {
 
 .welcome .message {
     color: white;
+    margin-top: 12px;
 }
 
 .google-login {
