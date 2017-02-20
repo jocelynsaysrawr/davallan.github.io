@@ -84,7 +84,7 @@ $(document).ready(function(){
       devolist = snapshot.val();
     });
 
-    console.log(devos);
+    console.log(devolist);
 
     function newDevo(devoId, title, body, author, date) {
       database.ref('devos/' + devoId).set({
