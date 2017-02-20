@@ -44,3 +44,13 @@ body {
     cursor: pointer;
     color: gray;
 }
+
+.sign-out {
+    position: absolute;
+    display: none;
+    top: 10px;
+    right: 10px;
+    padding: 6px;
+    cursor: pointer;
+    border: solid 1px white;
+}

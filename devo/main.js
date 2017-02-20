@@ -42,8 +42,20 @@ $(document).ready(function(){
         });
     }
 
+    function triggerSignOut() {
+        firebase.auth().signOut().then(function() {
+          window.location = '/devo/login';
+        }, function(error) {
+          alert('there was a problem logging out');
+        });
+    }
+
     $('.google-login').click(function(){
         triggerGoogleSignin();
+    });
+
+    $('.sign-out').click(function(){
+        triggerSignOut();
     });
 
 
@@ -54,6 +66,7 @@ $(document).ready(function(){
             $('.welcome img').attr('src', user.photoURL);
             $('.welcome .message').html('Welcome, ' + user.displayName);
             $('.google-login').hide();
+            $('.sign-out').show();
             console.log(user);
         } else {
             $('.google-login').show();
