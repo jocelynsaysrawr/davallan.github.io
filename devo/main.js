@@ -78,9 +78,10 @@ $(document).ready(function(){
 
     var database = firebase.database();
     var devos = database.ref('devos');
+    var devolist = {};
 
     devos.on('value', function(snapshot) {
-      console.log(snapshot.val());
+      devolist = snapshot.val();
     });
 
     console.log(devos);
@@ -97,7 +98,7 @@ $(document).ready(function(){
     function appendPosts(elementClass){
         console.log('append Posts called');
         var posts =
-        $.each(devos, function(){
+        $.each(devolist, function(){
             $('.'+ elementClass).append('<div>heres one</div>');
         });
     }
