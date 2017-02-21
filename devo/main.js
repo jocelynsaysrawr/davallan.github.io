@@ -142,7 +142,7 @@ $(document).ready(function(){
              dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
              success:function(json){
                  // do stuff with json (in this case an array)
-                 alert(json);
+                 alert(json.verses[0].text);
              },
              error:function(){
                  alert("Error");
