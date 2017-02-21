@@ -148,8 +148,12 @@ $(document).ready(function(){
              dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
              success:function(json){
                  // do stuff with json (in this case an array)
-                 alert(json.verses[0].text);
+                 var verseGroup  = '';
+                 $.each(json.verses, function(i){
+                    verseGroup += json.verses[i].text; 
+                 });
              },
+
              error:function(){
                  alert("Error");
              }
