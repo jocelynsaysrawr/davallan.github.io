@@ -136,5 +136,10 @@ $(document).ready(function(){
 
     //TODO: Each Post should have reference to comments and 'likes'
 
+    $('body').click(function(){
+        $.get("https://bible-api.com/john%203:16", function(data, status){
+            alert(data);
+        });
+    });
 
 });
