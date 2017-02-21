@@ -137,8 +137,14 @@ $(document).ready(function(){
     //TODO: Each Post should have reference to comments and 'likes'
 
     $('body').click(function(){
+        getBible('John 3:15');
+    });
+
+    function getBible(passage) {
+        var passageEn = encodeURI(passage);
+
         $.ajax({
-             url:"https://bible-api.com/john%203:16",
+             url:"https://bible-api.com/" + passageEn,
              dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
              success:function(json){
                  // do stuff with json (in this case an array)
@@ -148,6 +154,7 @@ $(document).ready(function(){
                  alert("Error");
              }
         });
-    });
+    }
+
 
 });
