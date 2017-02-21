@@ -137,8 +137,16 @@ $(document).ready(function(){
     //TODO: Each Post should have reference to comments and 'likes'
 
     $('body').click(function(){
-        $.get("https://bible-api.com/john+3:16?callback=func", function(data, status){
-            alert(data);
+        $.ajax({
+             url:"https://bible-api.com/john%203:16",
+             dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
+             success:function(json){
+                 // do stuff with json (in this case an array)
+                 alert(json);
+             },
+             error:function(){
+                 alert("Error");
+             }
         });
     });
 
