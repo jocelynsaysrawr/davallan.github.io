@@ -150,8 +150,9 @@ $(document).ready(function(){
                  // do stuff with json (in this case an array)
                  var verseGroup  = '';
                  $.each(json.verses, function(i){
-                    verseGroup += json.verses[i].text; 
+                    verseGroup += json.verses[i].text;
                  });
+                 alert(verseGroup);
              },
 
              error:function(){
