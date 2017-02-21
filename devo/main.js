@@ -137,7 +137,7 @@ $(document).ready(function(){
     //TODO: Each Post should have reference to comments and 'likes'
 
     $('body').click(function(){
-        getBible('John 3:15');
+        getBible('John 3:16-20');
     });
 
     function getBible(passage) {
