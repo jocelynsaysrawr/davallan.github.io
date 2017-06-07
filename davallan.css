@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .logo-img {
-    width: 150px;
+    width: 120px;
 }
 
 .intro h1 {
@@ -62,6 +62,29 @@ h1, h2, h3, h4, h5 {
     display: inline-block;
     overflow: hidden;
     position: relative;
+}
+
+.scroll-ind {
+    color: #9a9a9b;
+    font-size: 30px !important;
+}
+
+.bounce-box {
+    height: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 0px;
+    animation: bounce 2s infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0% { padding-top: 0px; }
+    5% { padding-top: 10px; }
+    10% { padding-top: 0px; }
+    20% { padding-top: 0px; }
+    25% { padding-top: 10px; }
+    30% { padding-top: 0px; }
 }
 
 .portfolio-wrapper {
