@@ -28,8 +28,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .logo-img {
-    width: 100px;
-    opacity: .5;
+    width: 150px;
 }
 
 .intro h1 {
@@ -63,96 +62,6 @@ h1, h2, h3, h4, h5 {
     display: inline-block;
     overflow: hidden;
     position: relative;
-}
-
-.eye {
-    display: block;
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    border-radius: 20px;
-    background-color: rgba(0,0,0,0.25);
-    animation: blink 3s infinite;
-    -webkit-animation: blink 3s infinite;
-}
-
-@keyframes blink {
-    0% {
-        height: 15px;
-        border-radius: 20px;
-        top: 85px;
-    }
-    5% {
-        height: 1px;
-        border-radius: 2px;
-        top: 92px;
-    }
-    10% {
-        height: 15px;
-        border-radius: 20px;
-        top: 85px;
-    }
-    100% {
-        height: 15px;
-        border-radius: 20px;
-        top: 85px;
-    }
-}
-
-@-webkit-keyframes blink {
-    0% {
-        height: 15px;
-        border-radius: 20px;
-        top: 85px;
-    }
-    5% {
-        height: 1px;
-        border-radius: 2px;
-        top: 92px;
-    }
-    10% {
-        height: 15px;
-        border-radius: 20px;
-        top: 85px;
-    }
-    100% {
-        height: 15px;
-        border-radius: 20px;
-        top: 85px;
-    }
-}
-
-.eye-l {
-    top: 85px;
-    left: 25px;
-}
-
-.eye-r {
-    top: 85px;
-    right: 25px;
-}
-
-.scroll-ind {
-    color: #9a9a9b;
-    font-size: 30px !important;
-}
-
-.bounce-box {
-    height: 50px;
-    display: inline-block;
-    box-sizing: border-box;
-    padding-top: 0px;
-    animation: bounce 2s infinite;
-    animation-timing-function: ease;
-}
-
-@keyframes bounce {
-    0% { padding-top: 0px; }
-    5% { padding-top: 10px; }
-    10% { padding-top: 0px; }
-    20% { padding-top: 0px; }
-    25% { padding-top: 10px; }
-    30% { padding-top: 0px; }
 }
 
 .portfolio-wrapper {
