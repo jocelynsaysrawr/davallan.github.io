@@ -31,8 +31,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .intro h1 {
-    color: #9a9a9b;
+    color: #616161;
     width: 100%;
+    font-weight: 100;
 }
 
 .post-wrapper {
