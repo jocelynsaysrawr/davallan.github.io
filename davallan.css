@@ -1,12 +1,11 @@
 body {
     padding: 0px;
     margin: 0px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Averia Sans Libre", sans-serif;
     background-color: #f4f4f4;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Indie Flower', cursive;
 }
 
 .section {
