@@ -9,11 +9,28 @@ h1, h2, h3, h4, h5 {
 }
 
 .section {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.section.intro {
+    min-height: 100vh;
+}
+
+.section.main.dark {
+    background: #212121;
+    color: #f4f4f4;
+}
+
+.inner-section {
+    display: block;
+    width: 90%;
+    margin: auto;
+    max-width: 800px;
+    padding: 24px;
     box-sizing: border-box;
 }
 
@@ -27,7 +44,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .logo-img {
-    width: 120px;
+    height: 100%;
 }
 
 .intro h1 {
@@ -62,6 +79,13 @@ h1, h2, h3, h4, h5 {
     display: inline-block;
     overflow: hidden;
     position: relative;
+    width: 20vmax;
+    height: 20vmax;
+    border-radius: 50%;
+    border: solid 2px transparent;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #00BCD4;
 }
 
 .scroll-ind {
@@ -74,17 +98,36 @@ h1, h2, h3, h4, h5 {
     display: inline-block;
     box-sizing: border-box;
     padding-top: 0px;
-    animation: bounce 2s infinite;
+    animation: bounce 3s infinite;
     animation-timing-function: ease;
+}
+
+.bounce-box:hover {
+    animation: none;
 }
 
 @keyframes bounce {
     0% { padding-top: 0px; }
-    5% { padding-top: 10px; }
+    5% { padding-top: 5px; }
     10% { padding-top: 0px; }
     20% { padding-top: 0px; }
-    25% { padding-top: 10px; }
+    25% { padding-top: 5px; }
     30% { padding-top: 0px; }
+}
+
+.enter-button {
+    cursor: pointer;
+    color: gray;
+    padding: 6px 24px;
+    border-radius: 50px;
+    border: solid 1px;
+    text-decoration: none;
+}
+
+.enter-button:hover {
+    color: white;
+    background: #00BCD4;
+    border-color: #00BCD4;
 }
 
 .portfolio-wrapper {
