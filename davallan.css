@@ -79,11 +79,11 @@ h1, h2, h3, h4, h5 {
     display: inline-block;
     overflow: hidden;
     position: relative;
-    width: 20vmax;
-    height: 20vmax;
+    width: 24vmax;
+    height: 24vmax;
     border-radius: 50%;
     border: solid 2px transparent;
-    padding: 24px;
+    padding: 12px;
     box-sizing: border-box;
     background: #00BCD4;
 }
