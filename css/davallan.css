@@ -1,0 +1,150 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Averia Sans Libre", sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5 {
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.section.intro {
+    min-height: 100vh;
+}
+
+.section.main.dark {
+    background: #212121;
+    color: #f4f4f4;
+}
+
+.inner-section {
+    display: block;
+    width: 90%;
+    margin: auto;
+    max-width: 800px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.flex-content {
+    max-width: 600px;
+    display: block;
+}
+
+.intro .flex-content {
+    text-align: center;
+}
+
+.logo-img {
+    height: 100%;
+}
+
+.intro h1 {
+    color: #616161;
+    width: 100%;
+    font-weight: 100;
+}
+
+.post-wrapper {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 24px;
+    background-color: white;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    color: gray;
+}
+
+.post-wrapper .title {
+    font-size: 2em;
+    width: 100%;
+    display: block;
+    margin-bottom: 18px;
+    margin-top: 0px;
+    line-height: 1em;
+}
+
+
+.logo-wrap {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 24vmax;
+    height: 24vmax;
+    border-radius: 50%;
+    border: solid 2px transparent;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #00BCD4;
+}
+
+.scroll-ind {
+    color: #9a9a9b;
+    font-size: 30px !important;
+}
+
+.bounce-box {
+    height: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 0px;
+    animation: bounce 3s infinite;
+    animation-timing-function: ease;
+}
+
+.bounce-box:hover {
+    animation: none;
+}
+
+@keyframes bounce {
+    0% { padding-top: 0px; }
+    5% { padding-top: 5px; }
+    10% { padding-top: 0px; }
+    20% { padding-top: 0px; }
+    25% { padding-top: 5px; }
+    30% { padding-top: 0px; }
+}
+
+.enter-button {
+    cursor: pointer;
+    color: gray;
+    padding: 6px 24px;
+    border-radius: 50px;
+    border: solid 1px;
+    text-decoration: none;
+}
+
+.enter-button:hover {
+    color: white;
+    background: #00BCD4;
+    border-color: #00BCD4;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-x: auto;
+    max-width: 800px;
+    border: solid 1px lightgray;
+    box-sizing: border-box;
+    padding: 24px;
+}
+
+.portem {
+    display: block;
+    min-width: 200px;
+    min-height: 200px;
+    background: white;
+    margin: 0px;
+}
