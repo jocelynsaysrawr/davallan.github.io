@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5 {
     height: 100%;
 }
 
-.intro h1 {
+h1 {
     color: #616161;
     width: 100%;
     font-weight: 100;
@@ -147,4 +147,64 @@ h1, h2, h3, h4, h5 {
     min-height: 200px;
     background: white;
     margin: 0px;
+}
+
+.section.work {
+    display: block;
+    min-height: 100vh;
+    padding: 3px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 800px;
+    color: #616161;
+    padding: 12px;
+}
+
+.title.work {
+    display: block;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 12px;
+    margin-top: 24px;
+}
+
+.desc.work {
+    margin-bottom: 24px;
+}
+
+.work-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.work-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100%/3 - 6px);
+    margin: 3px;
+    min-height: 200px;
+    text-align: center;
+    background-color: #00BCD4;
+    color: white;
+    padding:12px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.work-item .title {
+    font-size: 1.25em;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.work-item .desc {
+    display: block;
+    font-size: .8em;
+    font-weight: 100;
 }
